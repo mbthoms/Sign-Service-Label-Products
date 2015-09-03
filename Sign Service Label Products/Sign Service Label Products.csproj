@@ -63,6 +63,7 @@
     <Content Include="Dealer\vinyl_pricing.aspx" />
     <Content Include="css\global_styles.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="img\heros\index-hero.jpg" />
     <Content Include="img\sign_service_logo.svg" />
     <Content Include="img\slider\slide_3.jpg" />
     <Content Include="img\slider\slide_2.jpg" />

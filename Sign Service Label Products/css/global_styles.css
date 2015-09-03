@@ -67,11 +67,12 @@ ul {
 /*Nav Bar =============================================================================*/
 body {
     /*Making sure that the web content stay below the navbar.*/
-    padding-top: 50px;
+    padding-top: 20px;
 }
 
 /*Nav Bar Colours =========================================*/
 /*Main Colours */
+
 .navbar-default {
     background-color: #FFEB68;
     border-color: #e7e7e7;
@@ -88,13 +89,12 @@ body {
 .navbar-fixed-top .navbar-brand {
     padding: 0 15px;
     margin: 5px auto 10px auto;
-    ma
 }
 
 @media(min-width:768px) {
     body {
         /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
-        padding-top: 100px;
+        padding-top: 81px;
     }
 
     .navbar-fixed-top .navbar-brand {
@@ -125,17 +125,30 @@ a.back-to-top:hover {
 
 }
 
-/*Page Header ================================================================*/
-.page-head {
-    background-image: -webkit-linear-gradient(top, #2da8c7 0%, #25bfc7 100%);
-    background-image: -o-linear-gradient(top, #2da8c7 0%, #25bfc7 100%);
-    background-image: linear-gradient(to bottom, #2da8c7 0%, #25bfc7 100%);
-    background-repeat: repeat-x;
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2da8c7', endColorstr='#ff25bfc7', GradientType=0);
-    background-color: #2da8c7;
+/*Hero ================================================================*/
+#hero {
+    background: url(../img/heros/index-hero.jpg) bottom;
     color: #fff;
     padding: 35px 0;
     text-align: center;
+    min-height: 500px;  
+}
+
+#hero-text {
+    background-color: rgba(48,48,48,0.5);
+}
+
+.hero-heading-uppercase {
+    text-transform: uppercase;
+    font-size: 18pt;
+    font-weight: bold;    
+    opacity: 1;
+}
+
+.hero-subheading {
+    text-align: center;
+    font-size: 26pt;
+    opacity: 1;
 }
 
 .heading-btn {

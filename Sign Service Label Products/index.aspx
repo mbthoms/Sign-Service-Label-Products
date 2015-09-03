@@ -4,12 +4,12 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <section class="page-head">
+    <section id="hero">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-8 col-sm-offset-2">
-                        <h1 class="hero__heading u-uppercase">Sign service Label Products</h1>
-                        <h2 class="hero__subheading">Screen Printed Labels and Decals for the Trade</h2>
+                    <div id="hero-text" class="col-sm-8 col-sm-offset-2">
+                        <h1 class="hero-heading-uppercase">Sign service Label Products</h1>
+                        <h2 class="hero-subheading">Screen Printed Labels and Decals for the Trade</h2>
                         <a class="heading-btn" href="#">Learn More</a>
                     </div>
                 </div>
