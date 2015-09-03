@@ -1,0 +1,186 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Public.Master.cs" Inherits="Sign_Service_Label_Products.loggedOut" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <!-- Compatible with IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- Making sure that the pages scale to a mobile friendly veiw. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <!-- Font Awesome, Icons -->
+    <link href="../css/font-awesome.min.css" rel="stylesheet">
+    <!-- Slider -->
+    <link href="css/slider.css" rel="stylesheet" />
+    <!--Custom CSS -->
+    <link href="../css/global_styles.css" rel="stylesheet" />
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <!--
+        =================================================================================================================================
+        Fixed Navbar Section
+        =================================================================================================================================
+         -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="index.aspx">
+                    <svg width="220" height="55">
+                        <image xlink:href="img/sign_service_logo.svg" src="img/sign_service_logo.png" width="220" height="56" />
+                    </svg></a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="index.aspx">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Products <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Vinyls Labels</a></li>
+                            <li><a href="#">Digital Print</a></li>
+                            <li><a href="#">Magnetics</a></li>
+                            <li><a href="#">Window Decals</a></li>
+                            <li><a href="#">Clear Decals</a></li>
+                            <li><a href="#">Silver Decals</a></li>
+                            <li><a href="#">Gold Decals</a></li>
+                            <li><a href="#">Hi-Tack Labels</a></li>
+                            <li><a href="#">Lexan Face Plates</a></li>
+                            <li><a href="#">Parking Hang Tags</a></li>
+                            <li><a href="#">Much More...</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="login.html">Dealer Login</a></li>
+                </ul>
+            </div>
+            <!-- End of nav-collapse -->
+        </div>
+        <!-- End of container of the nav. -->
+    </nav>
+
+
+    <form id="form1" runat="server">
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+    </form>
+
+
+     <!--
+        =================================================================================================================================
+        Footer Section
+        =================================================================================================================================
+         -->
+        <footer class="margin-top-footer">
+            <!-- Contact Information ================================================================================================ -->
+
+            <div class="row">
+                <section class="container">
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <h3>Address</h3>
+                    <div class="padding-top">
+                        <p>
+                            14 Todd Road, Georgetown,
+                            <br />
+                            Ontario, Canada L7G 4R7
+                        </p>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <h3>Phone</h3>
+                    <div class="padding-top">
+                        <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span><a href="tel:9058732300">(905) 873-2300</a>
+                    </div>
+                    <div class="padding-top">
+                        <span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>Toll-Free:<a href="tel:18007872382"> 1(800) 787-2382</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <h3>Fax</h3>
+                    <div class="padding-top">
+                        <span class="fa fa-fax" aria-hidden="true"></span><a href="fax:9058737208">(905) 873-7208</a>
+                    </div>
+                    <div class="padding-top">
+                        <span class="fa fa-fax" aria-hidden="true"></span>Toll-Free:<a href="fax:18005831120"> 1(800) 583-1120</a>
+                    </div>
+                </div>
+                <div class="col-sm-12 col-md-6 col-lg-3">
+                    <h3>Email</h3>
+                    <div class="padding-top">
+                        <span class="fa fa-mail" aria-hidden="true"></span><a href="mailto:sales@signservice.com">sales@signservice.com</a>
+                    </div>
+                </div>
+                </section>
+            </div>
+            
+            <div class="text-center copyright-info">
+                <p>Copyright &copy; 1995 - 2015 <a href="http://signservice.com/">Sign Service Label Products</a> a division of 604731 Ontario Inc.</p>
+            </div>
+        </footer>
+    <!-- Back to Top button -->
+    <a href="#" class="back-to-top">Back to Top</a>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="js/slippry.min.js"></script>
+    <script>
+        $(function () {
+            var demo1 = $("#index-slider").slippry({
+                // transition: 'fade',
+                // useCSS: true,
+                // speed: 1000,
+                // pause: 3000,
+                // auto: true,
+                // preload: 'visible',
+                // autoHover: false
+            });
+        });
+    </script>
+    <!-- Back to top Button -->
+    <script>
+        var amountScrolled = 300;
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > amountScrolled) {
+                $('a.back-to-top').fadeIn('slow');
+            } else {
+                $('a.back-to-top').fadeOut('slow');
+            }
+        });
+
+        $('a.back-to-top').click(function () {
+            $('body, html').animate({
+                scrollTop: 0
+            }, 700);
+            return false;
+        });
+
+
+    </script>
+</body>
+</html>

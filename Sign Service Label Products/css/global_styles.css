@@ -1,0 +1,169 @@
+﻿/*Global Styling*/
+
+html, body {
+    background-color: #eeeeee;
+}
+
+
+.form-control, .dropdown-menu, .btn, .well {
+    border-radius: 0px;
+}
+
+/*Stock Informaiton Lists ==============================================================*/
+ul {
+    list-style-type: none;
+}
+#stock-info-list {
+ padding: 1rem 0rem 1rem 0rem;
+ margin: 1rem 0rem 1rem 0rem;
+ }
+
+/*Spacing =============================================================================*/
+.index-paneling {
+    margin-top: 2rem;
+    min-height: 200px;
+}
+
+.padding-btn {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+/*Pricing =============================================================================*/
+.total-pricing-amount {
+    font-size: 120%;
+    font-weight: bold;
+    border-top: 2px solid black;
+}
+
+/*Well =============================================================================*/
+.well-background {
+    background-color: white;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/*Full Details ========================================================================*/
+/*Making superscript and subscript functionality*/
+.superscript {
+    font-size:xx-small;
+    vertical-align:top;
+}
+
+.subscript {
+    font-size:xx-small;
+    vertical-align:bottom;
+}
+
+.full-info-numbers {
+    color: #337ab7;
+}
+
+/*Images ==============================================================================*/
+.sign_service_logo {
+    height: auto;
+    width: 75%;
+}
+
+/*Nav Bar =============================================================================*/
+body {
+    /*Making sure that the web content stay below the navbar.*/
+    padding-top: 50px;
+}
+
+/*Nav Bar Colours =========================================*/
+/*Main Colours */
+.navbar-default {
+    background-color: #FFEB68;
+    border-color: #e7e7e7;
+}
+.navbar-default .navbar-nav > li > a {
+    color: black;
+}
+
+.navbar-fixed-top .nav {
+    padding: 15px 0;
+
+}
+
+.navbar-fixed-top .navbar-brand {
+    padding: 0 15px;
+    margin: 5px auto 10px auto;
+    ma
+}
+
+@media(min-width:768px) {
+    body {
+        /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
+        padding-top: 100px;
+    }
+
+    .navbar-fixed-top .navbar-brand {
+        padding: 15px 0;
+        margin: 0;
+    }
+}
+
+/*Back to Top Button ==========================================================*/
+a.back-to-top {
+	display: none;
+    padding: 10px;
+	position: fixed;
+	z-index: 999;
+	right: 20px;
+	bottom: 20px;
+	background: #303030;
+    color: #FFEB68;
+    border: 4px solid #444545;
+    opacity: 0.7;
+}
+
+a.back-to-top:hover {
+    text-decoration: none;
+    background-color: #444545;
+    border: 4px solid #303030;
+    opacity: 1;
+
+}
+
+/*Page Header ================================================================*/
+.page-head {
+    background-image: -webkit-linear-gradient(top, #2da8c7 0%, #25bfc7 100%);
+    background-image: -o-linear-gradient(top, #2da8c7 0%, #25bfc7 100%);
+    background-image: linear-gradient(to bottom, #2da8c7 0%, #25bfc7 100%);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff2da8c7', endColorstr='#ff25bfc7', GradientType=0);
+    background-color: #2da8c7;
+    color: #fff;
+    padding: 35px 0;
+    text-align: center;
+}
+
+.heading-btn {
+
+    padding: 10px 30px;
+    border: 2px solid white;
+}
+
+.heading-btn:hover {
+    padding: 10px 30px;
+    border: 2px solid white;
+}
+/*Footer =====================================================================*/
+footer {
+    padding: 1em;
+    border-top: 20px solid #444545;
+    background-color: #303030;
+    color: white;
+}
+
+footer a {
+    color: #FFEB68;
+}
+
+.margin-top-footer {
+    margin-top: 3rem;
+}
+
+.copyright-info {
+    margin-top: 2rem;
+}
