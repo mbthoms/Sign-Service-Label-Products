@@ -120,6 +120,209 @@
                     </section>
                 </div>
             </div>
+            <!-- /.row -->
+
+            <div class="row">
+                <section class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="panel-group" id="accordion">
+                        <div class="panel panel-warning">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Matte White Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseOne" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.004" Matte White Vinyl is one of our most cost effective stocks, with it's wide variety of uses, it is an ideal product for anything from P.O.P display labels to product markings.</p>
+                                    <p>This product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand outdoor temperatures of -30ºF to +170ºF and has an indoor/outdoor expected life of 2-3 years.</p>
+
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Matte White Removable Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwo" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.004" Matte White Removable Vinyl has a wide variety of uses which makes it ideal for anything from P.O.P display labels to product markings. It's removable adhesive makes it a great temporary label and will stay removable for up to six months, after that it will leave an adhesive residue behind when removed. This product will last longer indoor or outdoor then the six months but will leave the residue behind when removed.</p>
+                                    <p>This Product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand outdoor temperatures of -30ºF to +170ºF.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Matte Safety Yellow Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseThree" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.004" Matte Safety Yellow Vinyl has a wide variety of uses which makes it ideal for anything from P.O.P display labels to product markings. The colour is close to PMS 123 which makes it perfect for safety and caution labels or where you require a high contrast background.</p>
+                                    <p>This product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand indoor / outdoor temperatures of -30ºF to +170ºF.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">White Hi Tack 156 Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseFour" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.004" White Hi Tack 156 Vinyl has a wide variety of uses which makes it ideal for anything from P.O.P display labels to vehicle markings. It has a high tack adhesive that allows cold temperature application. Once adhesive has setup this makes a very permanent label.</p>
+                                    <p>This Product is good for application above 32ºF but once the adhesive has set for 72 hours it can withstand outdoor temperatures of -30ºF to +170ºF.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Blockout White Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseFive" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.004" Blockout White Vinyl has a wide variety of uses which makes it ideal for covering from old P.O.P displays to product markings . It has a permanent adhesive with a white finish.</p>
+                                    <p>Within the adhesive is a silver-grey blocker so that previous markings underneath where you apply the label will not show through.</p>
+                                    <p>This product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand outdoor temperatures of -30ºF to +170ºF.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Static Cling White or Clear Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseSix" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.008" Static Cling Vinyl comes either in white or clear and has a wide variety of uses which makes it ideal for anything from product protection labels to window decals. The static cling properties make it ideal to apply where removal and reuse are a benefit.</p>
+                                    <p>This product is good for application above 50ºF on a clean surface and it can withstand temperatures of -30ºF to +170ºF</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">Low Tack White Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseSeven" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.004" Low Tack Vinyl comes either in white or clear and has a wide variety of uses which makes it ideal for anything from P.O.P display labels to Window Decals. It has a low tack adhesive that makes it adhere better then a static cling label but just as removable.</p>
+                                    <p>This product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand temperatures of -30ºF to +170ºF. </p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">Clear Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseEight" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.004" Clear Vinyl has a wide variety of uses which makes it ideal for anything from P.O.P display labels to product markings & vehicle markings.</p>
+                                    <p>This product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand outdoor temperatures of -30ºF to +170ºF and has an indoor/outdoor expected life of 1-2 years.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">5 Year Hi Tack White Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseNine" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.004" 5 Year Outdoor Hi Tack White Vinyl has a wide variety of uses, which makes it ideal for anything from P.O.P display labels to vehicle markings. It's specially designed adhesive coupled with it's extended life vinyl make it great for applying to hard to adhere to surfaces like polyetholine.</p>
+                                    <p>This product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand indoor / outdoor temperatures of -30ºF to +170ºF.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTen">Bumper Stickers</a>
+                                </h4>
+                            </div>
+                            <div id="collapseTen" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.004" Bumper Sticker Vinyl is a very cost effective stock for bumper stickers, This product has a white background and is designed to have a 1 year outdoor life and comes in only two finished sizes.</p>
+                                    <p>For custom sizes please go to .004" Matte White Vinyl. This product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand outdoor temperatures of -30ºF to +170ºF and has an indoor/outdoor expected life of 1 year.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEleven">Destructible Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseEleven" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.0025" Destructible Vinyl is a great destructible stock used in tamper proof markings. When this stock is attempted to be removed after the adhesive has set for 72 hours, the product breaks apart into very small hard to remove pieces. This stock has a hi-tack permanent adhesive. </p>
+                                    <p></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwelve">Matte Light Yellow Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseTwelve" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.004" Matte Light Yellow Vinyl has a wide variety of uses which makes it ideal for anything from P.O.P display labels to product markings. The colour is close to Pantone® Yellow making it great where a lighter yellow background is needed.</p>
+                                    <p>This product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand outdoor temperatures of -30ºF to +170ºF and has an indoor/outdoor expected life of 2-3 years.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                        <div class="panel panel-default">
+                            <div class="panel-heading">
+                                <h4 class="panel-title">
+                                    <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThirteen">Gloss White Vinyl</a>
+                                </h4>
+                            </div>
+                            <div id="collapseThirteen" class="panel-collapse collapse">
+                                <div class="panel-body">
+                                    <p>.004" Gloss White Vinyl has a wide variety of uses which makes it ideal for anything from P.O.P display labels to product markings. It has a permanent adhesive with a gloss white finish.</p>
+                                    <p>This product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand outdoor temperatures of -30ºF to +170ºF.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /.panel -->
+                    </div>
+                    <!-- /.panel-group -->
+                </section>
+            </div>
+
+
+
+
+
+
+
+
+
+
             <div class="row">
                 <section class="col-sm-12 col-md-3 col-lg-3">
                     <h2>List of Stock Information</h2>
@@ -135,7 +338,7 @@
                         <li><a href="#5-year-hi-tack-white-vinyl">5 Year Hi Tack White Vinyl</a></li>
                         <li><a href="#bumper-stickers">Bumper Stickers</a></li>
                         <li><a href="#destructible-vinyl">Destructible Vinyl</a></li>
-                        <li><a href="#matte-light-yellow-vinyl">Matte Light Yellow Vi  nyl</a></li>
+                        <li><a href="#matte-light-yellow-vinyl">Matte Light Yellow Vinyl</a></li>
                         <li><a href="#gloss-white-vinyl">Gloss White Vinyl</a></li>
                     </ul>
                 </section>

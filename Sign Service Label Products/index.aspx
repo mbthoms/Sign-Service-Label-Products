@@ -1,10 +1,10 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Public.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Sign_Service_Label_Products.index" %>
+﻿<%@ Page Title="Home - Sign Service Label Products" Language="C#" MasterPageFile="~/Public.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Sign_Service_Label_Products.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-    <section id="hero">
+    <%--   <section id="hero">
             <div class="container">
                 <div class="row">
                     <div id="hero-text" class="col-sm-8 col-sm-offset-2">
@@ -14,19 +14,42 @@
                     </div>
                 </div>
             </div>
+        </section>--%>
+
+
+    <div class="row">
+        <section id="hero" class="col-sm-12 col-md-12 col-lg-12">
+            <div id="hero-text">
+                <h1 class="hero-heading-uppercase">Sign service Label Products</h1>
+                <h2 class="hero-subheading">Screen Printed Labels and Decals for the Trade</h2>
+                <h3><a id="toll-free-phone-index" href="tel:18007872382">1 (800) 787-2382</a></h3>
+                <a id="hero-btn" href="#page-content">Are you a Reseller?</a>
+            </div>
+            <!-- End of Hero Text -->
+
         </section>
-
-    <div class="container">
-        <h1>Welcome to Sign Service Label Products</h1>
-        <h2>Producing Quality Labels & decals to the Trade.</h2>
-
-        <p>At Sign Service Label Products we are dedicated to the trade, providing screen printed & digitally printed labels and decals for over 30 years.</p>
-        <p>As a wholesale to the trade company you are our sales staff as resellers of our products. This allows us to keep our prices low enabling you to keep your profits high.</p>
-        <p>We Screen Print & Digitally Print, Laminate and Custom Die-cut Labels and Decals, Face plates & Nameplates, Small Signs (max. 24” x 36”), Single & Two Sided Window Decals, Parking Hang Tags, Magnetics. We carry specialty adhesives, laminates, polyesters, vinyls, Lexans and we even print Bumper Stickers.</p>
-        <p>Allow Sign Service Label Products to make our success your success, and thank you for the opportunity to reproduce your image.</p>
-        <p>Located in Ontario Canada we can ship screen printed & digitally printed labels & decals with ROHS & REACH standards<a class="superscript" href="#more-info">[1]</a> to customers throughout Canada and USA.</p>
-        <p>Self adhesive permanent & removable labels, decals, hang tags, placards, Lexan nameplates, signs, and bumper stickers are a great addition to your product offerings.</p>
-
+        <section id="hero-arrow" class="col-sm-12 col-md-12 col-lg-12">
+            <a href="#page-content" class="animated infinite bounce fa fa-4x fa-angle-double-down "></a>
+        </section>
+    </div>
+    <div id="page-content" class="container well-background">
+        <div class="page-header">
+            <h1>Sign Service Label Products <small>Producing Quality Labels & decals to the Trade Since 1981.</small></h1>
+        </div>
+        <div class="row">
+            <section class="col-sm-12 col-md8 col-lg-8">
+                <p>At Sign Service Label Products we are dedicated to the trade, providing screen printed & digitally printed labels and decals for over 30 years.</p>
+                <p>As a wholesale to the trade company you are our sales staff as resellers of our products. This allows us to keep our prices low enabling you to keep your profits high.</p>
+                <p>We Screen Print & Digitally Print, Laminate and Custom Die-cut Labels and Decals, Face plates & Nameplates, Small Signs (max. 24” x 36”), Single & Two Sided Window Decals, Parking Hang Tags, Magnetics. We carry specialty adhesives, laminates, polyesters, vinyls, Lexans and we even print Bumper Stickers.</p>
+                <p>Allow Sign Service Label Products to make our success your success, and thank you for the opportunity to reproduce your image.</p>
+                <p>Located in Ontario Canada we can ship screen printed & digitally printed labels & decals with ROHS & REACH standards<a class="superscript" href="#more-info">[1]</a> to customers throughout Canada and USA.</p>
+                <p>Self adhesive permanent & removable labels, decals, hang tags, placards, Lexan nameplates, signs, and bumper stickers are a great addition to your product offerings.</p>
+            </section>
+            <section class="col-sm-12 col-md-4 col-lg-4">
+                <img src="http://placehold.it/350x300" alt="Alternate Text" />
+            </section>
+        </div>
+       
         <div class="row">
             <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="index-paneling panel panel-warning">

@@ -58,8 +58,10 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="css\animate.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\slider.css" />
+    <Content Include="Dealer\dealer_faq.aspx" />
     <Content Include="Dealer\vinyl_pricing.aspx" />
     <Content Include="css\global_styles.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
@@ -70,10 +72,19 @@
     <Content Include="img\slider\slide_1.jpg" />
     <Content Include="img\up-arrow.png" />
     <Content Include="index.aspx" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.min.js" />
     <Content Include="js\slippry.min.js" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Dealer\dealer_faq.aspx.cs">
+      <DependentUpon>dealer_faq.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Dealer\dealer_faq.aspx.designer.cs">
+      <DependentUpon>dealer_faq.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dealer\DealerLogin.Master.cs">
       <DependentUpon>DealerLogin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
