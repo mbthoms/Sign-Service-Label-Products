@@ -123,9 +123,9 @@
             <!-- /.row -->
 
             <div class="row">
-                <section class="col-sm-12 col-md-12 col-lg-12">
+                <section class="col-sm-12 col-md-8 col-lg-8">
                     <div class="panel-group" id="accordion">
-                        <div class="panel panel-warning">
+                        <div class="panel panel-default">
                             <div class="panel-heading">
                                 <h4 class="panel-title">
                                     <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Matte White Vinyl</a>
@@ -312,8 +312,32 @@
                     </div>
                     <!-- /.panel-group -->
                 </section>
-            </div>
+                <section class="col-sm-12 col-md-4 col-lg-4 text-center">
+                <div class="row">
+                    <section class="col-sm-12- col-md-12 col-lg-12">
+                        <img id="vinyl-pricing-1-img" src="http://placehold.it/700x350" alt="#" />
+                    </section>
+                </div>
+                <div class="row">
+                    <section class="col-sm-12- col-md-12 col-lg-12">
+                        <figure>
+                            <img id="vinyl-pricing-2-img" src="../img/dealer/vinyl_pricing/yellow_vinyl_backing.jpg" alt="A photo showing the back of a light yellow vinyl label." />
+                            <figcaption>The back of a Matte Light Yellow Vinyl Label.</figcaption>
+                        </figure>
+                        
+                    </section>
+                </div>
+                 <div class="row">
+                    <section class="col-sm-12- col-md-12 col-lg-12">
+                        <img id="vinyl-pricing-3-img" src="http://placehold.it/700x350" alt="#" />
+                    </section>
+                </div>
+            </section>
 
+
+
+            </div>
+            <!-- /.row -->
 
 
 

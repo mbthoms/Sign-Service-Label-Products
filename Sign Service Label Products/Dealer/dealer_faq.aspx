@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Dealer/DealerLogin.Master" AutoEventWireup="true" CodeBehind="dealer_faq.aspx.cs" Inherits="Sign_Service_Label_Products.Dealer.dealer_faq" %>
+﻿<%@ Page Title="Dealer FAQ - Dealer Login - Sign Service Label Products" Language="C#" MasterPageFile="~/Dealer/DealerLogin.Master" AutoEventWireup="true" CodeBehind="dealer_faq.aspx.cs" Inherits="Sign_Service_Label_Products.Dealer.dealer_faq" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-lg-12">
                 <div class="panel-group" id="accordion">
-                    <div class="panel panel-warning">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">Question 1?</a>
@@ -25,7 +25,7 @@
                         </div>
                     </div>
                     <!-- /.panel -->
-                    <div class="panel panel-warning">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">Question 2?</a>
@@ -38,7 +38,7 @@
                         </div>
                     </div>
                     <!-- /.panel -->
-                    <div class="panel panel-warning">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">Question 3?</a>
@@ -51,7 +51,7 @@
                         </div>
                     </div>
                     <!-- /.panel -->
-                    <div class="panel panel-warning">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Question 4?</a>
@@ -64,7 +64,7 @@
                         </div>
                     </div>
                     <!-- /.panel -->
-                    <div class="panel panel-warning">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Question 5?</a>
@@ -77,7 +77,7 @@
                         </div>
                     </div>
                     <!-- /.panel -->
-                    <div class="panel panel-warning">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">Question 6?</a>
@@ -90,7 +90,7 @@
                         </div>
                     </div>
                     <!-- /.panel -->
-                    <div class="panel panel-warning">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSeven">Question 7?</a>
@@ -103,7 +103,7 @@
                         </div>
                     </div>
                     <!-- /.panel -->
-                    <div class="panel panel-warning">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseEight">Question 8?</a>
@@ -116,7 +116,7 @@
                         </div>
                     </div>
                     <!-- /.panel -->
-                    <div class="panel panel-warning">
+                    <div class="panel panel-default">
                         <div class="panel-heading">
                             <h4 class="panel-title">
                                 <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseNine">Question 9?</a>

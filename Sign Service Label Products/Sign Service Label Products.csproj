@@ -58,6 +58,7 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="contact.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\slider.css" />
@@ -65,19 +66,25 @@
     <Content Include="Dealer\vinyl_pricing.aspx" />
     <Content Include="css\global_styles.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="img\dealer\vinyl_pricing\yellow_vinyl_backing.jpg" />
     <Content Include="img\heros\index-hero.jpg" />
+    <Content Include="img\index\danger_high_voltage.jpg" />
+    <Content Include="img\index\stewarttown_school_meg.jpg" />
     <Content Include="img\sign_service_logo.svg" />
-    <Content Include="img\slider\slide_3.jpg" />
-    <Content Include="img\slider\slide_2.jpg" />
-    <Content Include="img\slider\slide_1.jpg" />
-    <Content Include="img\up-arrow.png" />
     <Content Include="index.aspx" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.min.js" />
-    <Content Include="js\slippry.min.js" />
+    <Content Include="login.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="contact.aspx.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="contact.aspx.designer.cs">
+      <DependentUpon>contact.aspx</DependentUpon>
+    </Compile>
     <Compile Include="Dealer\dealer_faq.aspx.cs">
       <DependentUpon>dealer_faq.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -105,6 +112,13 @@
     </Compile>
     <Compile Include="index.aspx.designer.cs">
       <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="login.aspx.cs">
+      <DependentUpon>login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="login.aspx.designer.cs">
+      <DependentUpon>login.aspx</DependentUpon>
     </Compile>
     <Compile Include="Public.Master.cs">
       <DependentUpon>Public.Master</DependentUpon>

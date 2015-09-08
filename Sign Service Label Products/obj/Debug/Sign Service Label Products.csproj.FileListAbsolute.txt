@@ -28,3 +28,9 @@ C:\Users\matthewthoms\OneDrive\Sign Service\Site Files\Sign Service Label Produc
 C:\Users\matthewthoms\OneDrive\Sign Service\Site Files\Sign Service Label Products\Sign Service Label Products\obj\Debug\Sign Service Label Products.csprojResolveAssemblyReference.cache
 C:\Users\matthewthoms\OneDrive\Sign Service\Site Files\Sign Service Label Products\Sign Service Label Products\obj\Debug\Sign Service Label Products.dll
 C:\Users\matthewthoms\OneDrive\Sign Service\Site Files\Sign Service Label Products\Sign Service Label Products\obj\Debug\Sign Service Label Products.pdb
+C:\Users\matthewthoms\OneDrive\College Work\Co-op Work Term\Sign Service\Site Files\Sign Service Label Products\Sign Service Label Products\bin\Sign Service Label Products.dll.config
+C:\Users\matthewthoms\OneDrive\College Work\Co-op Work Term\Sign Service\Site Files\Sign Service Label Products\Sign Service Label Products\bin\Sign Service Label Products.dll
+C:\Users\matthewthoms\OneDrive\College Work\Co-op Work Term\Sign Service\Site Files\Sign Service Label Products\Sign Service Label Products\bin\Sign Service Label Products.pdb
+C:\Users\matthewthoms\OneDrive\College Work\Co-op Work Term\Sign Service\Site Files\Sign Service Label Products\Sign Service Label Products\obj\Debug\Sign Service Label Products.csprojResolveAssemblyReference.cache
+C:\Users\matthewthoms\OneDrive\College Work\Co-op Work Term\Sign Service\Site Files\Sign Service Label Products\Sign Service Label Products\obj\Debug\Sign Service Label Products.dll
+C:\Users\matthewthoms\OneDrive\College Work\Co-op Work Term\Sign Service\Site Files\Sign Service Label Products\Sign Service Label Products\obj\Debug\Sign Service Label Products.pdb

@@ -3,50 +3,43 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
-    <%--   <section id="hero">
-            <div class="container">
-                <div class="row">
-                    <div id="hero-text" class="col-sm-8 col-sm-offset-2">
+        <div class="row">
+                <section id="hero" class="col-sm-12 col-md-12 col-lg-12">
+                    <div id="hero-text" class="container">
                         <h1 class="hero-heading-uppercase">Sign service Label Products</h1>
-                        <h2 class="hero-subheading">Screen Printed Labels and Decals for the Trade</h2>
-                        <a class="heading-btn" href="#">Learn More</a>
+                        <h2 class="hero-subheading">Screen Printed Labels and Decals for the Trade.</h2>
+                        <h2><a id="toll-free-phone-index" href="tel:18007872382">1 (800) 787-2382</a></h2>
                     </div>
-                </div>
+                    <!-- End of Hero Text -->
+
+                </section>
             </div>
-        </section>--%>
-
-
-    <div class="row">
-        <section id="hero" class="col-sm-12 col-md-12 col-lg-12">
-            <div id="hero-text">
-                <h1 class="hero-heading-uppercase">Sign service Label Products</h1>
-                <h2 class="hero-subheading">Screen Printed Labels and Decals for the Trade</h2>
-                <h3><a id="toll-free-phone-index" href="tel:18007872382">1 (800) 787-2382</a></h3>
-                <a id="hero-btn" href="#page-content">Are you a Reseller?</a>
-            </div>
-            <!-- End of Hero Text -->
-
-        </section>
-        <section id="hero-arrow" class="col-sm-12 col-md-12 col-lg-12">
-            <a href="#page-content" class="animated infinite bounce fa fa-4x fa-angle-double-down "></a>
-        </section>
-    </div>
+    
     <div id="page-content" class="container well-background">
         <div class="page-header">
             <h1>Sign Service Label Products <small>Producing Quality Labels & decals to the Trade Since 1981.</small></h1>
         </div>
         <div class="row">
-            <section class="col-sm-12 col-md8 col-lg-8">
+            <section class="col-sm-12 col-md-8 col-lg-8">
                 <p>At Sign Service Label Products we are dedicated to the trade, providing screen printed & digitally printed labels and decals for over 30 years.</p>
                 <p>As a wholesale to the trade company you are our sales staff as resellers of our products. This allows us to keep our prices low enabling you to keep your profits high.</p>
                 <p>We Screen Print & Digitally Print, Laminate and Custom Die-cut Labels and Decals, Face plates & Nameplates, Small Signs (max. 24” x 36”), Single & Two Sided Window Decals, Parking Hang Tags, Magnetics. We carry specialty adhesives, laminates, polyesters, vinyls, Lexans and we even print Bumper Stickers.</p>
                 <p>Allow Sign Service Label Products to make our success your success, and thank you for the opportunity to reproduce your image.</p>
                 <p>Located in Ontario Canada we can ship screen printed & digitally printed labels & decals with ROHS & REACH standards<a class="superscript" href="#more-info">[1]</a> to customers throughout Canada and USA.</p>
                 <p>Self adhesive permanent & removable labels, decals, hang tags, placards, Lexan nameplates, signs, and bumper stickers are a great addition to your product offerings.</p>
+                <p>Just a few of the quality stocks we print are Vinyls, Mylars (Polyesters), Reflectives, Metallized Polyesters, Cling Vinyls, Computer Imprintables, Magnetics, Solid Foils, Coroplast, Card Stocks, PVC, Lexan (Polycarbonates).</p>
             </section>
-            <section class="col-sm-12 col-md-4 col-lg-4">
-                <img src="http://placehold.it/350x300" alt="Alternate Text" />
+            <section class="col-sm-12 col-md-4 col-lg-4 text-center">
+                <div class="row">
+                    <section class="col-sm-12- col-md-12 col-lg-12">
+                        <img id="index-1-img" src="img/index/stewarttown_school_meg.jpg" alt="A photo of a magnet containing Stewarttown Middle School information." />
+                    </section>
+                </div>
+                <div class="row">
+                    <section class="col-sm-12- col-md-12 col-lg-12">
+                        <img id="index-2-img" src="img/index/danger_high_voltage.jpg" alt="A photo of a label containing the words Danger, High Voltage." />
+                    </section>
+                </div>
             </section>
         </div>
        
@@ -58,6 +51,7 @@
                     </div>
                     <div class="panel-body">
                         <p>At Sign Service Label Products we have been Producing Quality Labels & decals to the TRADE for 30 Years. We are Family Owned & operated and 100% Canadian Owned.</p>
+                        <a href="about.aspx" class="btn btn-warning">Read More...</a>
                     </div>
                     <!-- End of Panel Body -->
                 </div>
@@ -73,6 +67,7 @@
                     <!-- End of Panel Heading -->
                     <div class="panel-body">
                         <p>We are a TRADE ONLY Screen Printed and Digital Label & Decal Supplier. If you are reselling our product to an end user then please continue. If you are an end user of our products then please contact a label supplier in your area.</p>
+                        <a href="login.aspx" class="btn btn-warning">Sign Up for Dealer Login.</a> 
                     </div>
                     <!-- End of Panel Body -->
                 </div>
@@ -83,11 +78,12 @@
             <div class="col-sm-12 col-md-4 col-lg-4">
                 <div class="index-paneling panel panel-warning">
                     <div class="panel-heading">
-                        <h3 class="panel-title">Thinking of Ordering?</h3>
+                        <h3 class="panel-title">Contact Us</h3>
                     </div>
                     <div class="panel-body">
                         <p>Our order desk is open 8am - 5pm Monday to Friday (except holidays) and our Art Department is able to accept your PC & MAC files for colour separating, trapping and stepping. Quotations are given back within 24 hours<a href="#more-info" class="superscript">[2]</a> and delivery is from two to three weeks without rush charges.</p>
-                    </div>
+                        <a href="contact.aspx" class="btn btn-warning">Contact Us</a> 
+                   </div>
                     <!-- End of Panel Body -->
                 </div>
                 <!-- End of Paneling -->
@@ -96,7 +92,7 @@
         </div>
         <!-- Endo of Row -->
 
-
+        <!-- Full Information - More Information Section-->
         <div id="more-info" class="row subscript">
             <div class="col-sm-12 col-md-12 col-lg-12">
                 <h5>Full Details</h5>
@@ -106,5 +102,4 @@
         </div>
     </div>
     <!-- End of Container -->
-
 </asp:Content>
