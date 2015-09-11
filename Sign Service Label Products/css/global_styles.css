@@ -10,7 +10,7 @@ html, body {
 }
 
 /*Stock Informaiton Lists ==============================================================*/
-ul {
+#stock-list {
     list-style-type: none;
 }
 #stock-info-list {
@@ -70,17 +70,64 @@ ul {
     width: 75%;
 }
 
+/*Public Pages-----------------------*/
+
+
 #index-1-img, #index-2-img {
     padding-top: 1rem;
     height: auto;
     width: 100%;
 }
 
+#about-1-img, #about-2-img, #about-3-img {
+    padding-top: 1rem;
+    height: auto;
+    width: 100%;
+}
+
+#equipment-1-img, #equipment-2-img {
+    padding-top: 1rem;
+    height: auto;
+    width: 100%;
+}
+
+#equipment-2-img {
+    padding-bottom: 2rem;
+}
+
+#stocks-1-img {
+    padding-top: 1rem;
+    height: auto;
+    width: 100%;
+}
+
+#vinyl_labels-1-img, #vinyl_labels-2-img, #vinyl_labels-3-img {
+    padding-top: 1rem;
+    height: auto;
+    width: 100%;
+}
+
+.end-img-left {
+    margin-left: 0.5rem;
+}
+
+.end-img-right {
+    margin-right: 0.5rem;
+}
+
+#product-modal-img {
+    width:100%;
+    height: auto;
+}
+
+/*Dealer Pages------------------------*/
+
 #vinyl-pricing-1-img, #vinyl-pricing-2-img, #vinyl-pricing-3-img {
     padding-top: 1rem;
     height: auto;
     width: 100%;
 }
+
 
 /*Nav Bar =============================================================================*/
 body {
@@ -109,7 +156,7 @@ body {
     margin: 5px auto 10px auto;
 }
 
-@media(min-width:768px) {
+@media(min-width:992px) {
     body {
         /* Required padding for .navbar-fixed-top. Change if height of navigation changes. */
         padding-top: 81px;
@@ -118,6 +165,28 @@ body {
     .navbar-fixed-top .navbar-brand {
         padding: 10px 0;
         margin: 0;
+    }
+
+    nav.navbar.navbar-default.navbar-fixed-top {
+        border-bottom: 0;
+        box-shadow: 0px 2px 5px gray;
+        opacity: 0.95;
+        -webkit-font-smoothing: antialiased;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
+    }
+
+    nav.navbar.navbar-default.navbar-fixed-top:hover {
+        border-bottom: 0;
+        box-shadow: 0px 2px 5px gray;
+        opacity: 1;
+        -webkit-font-smoothing: antialiased;
+    -webkit-transition: all 0.2s ease-in-out;
+    -o-transition: all 0.2s ease-in-out;
+    transition: all 0.2s ease-in-out;
+
     }
 }
 
@@ -156,9 +225,22 @@ a.back-to-top:hover {
 }
 
 #hero-text {
-    margin-top: 155px;
+    margin-top: 46px;
     color: white;
     padding-bottom: 2.5rem;
+    padding-top: 125px;
+}
+
+@media(min-width:992px) {
+
+    #hero-text {
+        margin-top: 155px;
+        color: white;
+        padding-bottom: 2.5rem;
+        padding-top: 0px;
+    }
+
+
 }
 
 .hero-heading-uppercase {

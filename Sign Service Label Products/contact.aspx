@@ -1,15 +1,15 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Public.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="Sign_Service_Label_Products.contact" %>
+﻿<%@ Page Title="Contact Us - Sign Serivce Label Products" Language="C#" MasterPageFile="~/Public.Master" AutoEventWireup="true" CodeBehind="contact.aspx.cs" Inherits="Sign_Service_Label_Products.contact" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
     <div id="page-content" class="container well-background">
         <div class="page-header">
-            <h1>Contact</h1>
+            <h1>Contact Us</h1>
         </div>
         <div class="row">
             <section class="col-sm-12 col-md-12 col-lg-12">
-                <p>We would like to hear from you, You can use the contact form below or use any on the contact information below to contact us.</p>
+                <p>We would like to hear from you, you can use the contact form below or use any on the contact information below to contact us.</p>
             </section>
         </div>
         <!-- ================================================================================================
@@ -141,7 +141,7 @@
 
             <!-- Google Maps/ Google Maps API -->
             <section class="col-sm-12 col-md-12 col-lg-12">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2744.40290857934!2d-79.90422839999995!3d43.65243150711077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b12b3a42c2e8d%3A0x428b2bad148b06ce!2sSign+Service+Label+Product!5e1!3m2!1sen!2sca!4v1441655522447" width="100%" height="300" frameborder="0" style="border: 0" allowfullscreen></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.795086054539!2d-79.9042284!3d43.6524315!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b12b3a42c2e8d%3A0x428b2bad148b06ce!2sSign+Service+Label+Product!5e0!3m2!1sen!2sca!4v1441890814702" width="100%" height="300" frameborder="0" style="border: 0" allowfullscreen></iframe>
             </section>
             <!-- /Google Maps/Google Maps API. -->
         </div>

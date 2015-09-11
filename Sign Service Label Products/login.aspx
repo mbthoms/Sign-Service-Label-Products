@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Public.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Sign_Service_Label_Products.login" %>
+﻿<%@ Page Title="Login - Sign Service Label Products" Language="C#" MasterPageFile="~/Public.Master" AutoEventWireup="true" CodeBehind="login.aspx.cs" Inherits="Sign_Service_Label_Products.login" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
@@ -36,7 +36,7 @@
             <div class="modal-content">
                 <div class="modal-header">
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                    <h1 class="modal-title" id="myModalLabel">Sign Up</h1>
+                    <h1 class="modal-title" id="myModalLabel">Sign Up <small>for Dealer Login</small></h1>
                 </div>
                 <div class="modal-body">
                     <fieldset>

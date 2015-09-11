@@ -58,26 +58,46 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="about.aspx" />
     <Content Include="contact.aspx" />
     <Content Include="css\animate.css" />
+    <Content Include="css\bootstrap.css" />
     <Content Include="css\font-awesome.min.css" />
+    <Content Include="css\print\printer_page_styles.css" />
     <Content Include="css\slider.css" />
     <Content Include="Dealer\dealer_faq.aspx" />
     <Content Include="Dealer\vinyl_pricing.aspx" />
     <Content Include="css\global_styles.css" />
+    <Content Include="equipment.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="img\dealer\vinyl_pricing\yellow_vinyl_backing.jpg" />
+    <Content Include="img\equipment\printer_ink.jpg" />
+    <Content Include="img\equipment\diecutting_press.jpg" />
     <Content Include="img\heros\index-hero.jpg" />
     <Content Include="img\index\danger_high_voltage.jpg" />
     <Content Include="img\index\stewarttown_school_meg.jpg" />
+    <Content Include="img\products\corvette_decal.jpg" />
+    <Content Include="img\products\flower_meg.jpg" />
+    <Content Include="img\products\truck_meg.jpg" />
+    <Content Include="img\products\stewarttown_school_meg.jpg" />
+    <Content Include="img\products\vinyl_thumb.jpg" />
     <Content Include="img\sign_service_logo.svg" />
     <Content Include="index.aspx" />
     <Content Include="js\bootstrap.min.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="login.aspx" />
+    <Content Include="stocks.aspx" />
+    <Content Include="products.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="about.aspx.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="about.aspx.designer.cs">
+      <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -106,6 +126,13 @@
     <Compile Include="Dealer\vinyl_pricing.aspx.designer.cs">
       <DependentUpon>vinyl_pricing.aspx</DependentUpon>
     </Compile>
+    <Compile Include="equipment.aspx.cs">
+      <DependentUpon>equipment.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="equipment.aspx.designer.cs">
+      <DependentUpon>equipment.aspx</DependentUpon>
+    </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -128,6 +155,20 @@
       <DependentUpon>Public.Master</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="stocks.aspx.cs">
+      <DependentUpon>stocks.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="stocks.aspx.designer.cs">
+      <DependentUpon>stocks.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="products.aspx.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="products.aspx.designer.cs">
+      <DependentUpon>products.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Public.Master" />
