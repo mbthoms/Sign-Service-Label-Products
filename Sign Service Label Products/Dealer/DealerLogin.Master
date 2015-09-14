@@ -64,8 +64,6 @@
                             <li><a href="#">Coroplast Signs</a></li>
                         </ul>
                     </li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
                     <li><a href="#"><i class="fa fa-sign-out"></i> Dealer Logout</a></li>
                 </ul>
             </div>

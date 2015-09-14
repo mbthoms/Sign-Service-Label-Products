@@ -27,43 +27,44 @@ namespace Sign_Service_Label_Products
 
             //try
             //{
-                MailMessage mail = new MailMessage();
-                mail.To.Add("matthew@matthewthoms.com"); //Change to sales@signservice.com when launching.
-                mail.To.Add(Email);
-                mail.From = new MailAddress("signservicecontactform@gmail.com");
-                mail.Subject = Subject;
+            MailMessage mail = new MailMessage();
+            mail.To.Add("matthew@matthewthoms.com"); //Change to sales@signservice.com when launching.
+            mail.To.Add(Email);
+            mail.From = new MailAddress("signservicecontactform@gmail.com");
+            mail.Subject = Subject;
 
-                string Body = "<h1>Message from Contact Form</h1>" +
-                              "<br />" +
-                              "<b>Name:</b>" + " " + Name +
-                              "<br />" +
-                              "<b>Comapny Name:</b>" + " " + CompanyName +
-                              "<br />" +
-                              "<b>Contact Email:</b>" + " " + Email +
-                              "<br />" +
-                              "<b>Contact Phone Number:</b>" + " " + PhoneNumber +
-                              "<br />" +
-                              "<b>Contact Fax:</b>" + " " + Fax +
-                              "<br />" +
-                              "<b>Message:</b>" + "<br />" + Message;
-                mail.Body = Body;
+            string Body = "<h1>Message from Contact Form</h1>" +
+                          "<br />" +
+                          "<b>Name:</b>" + " " + Name +
+                          "<br />" +
+                          "<b>Comapny Name:</b>" + " " + CompanyName +
+                          "<br />" +
+                          "<b>Contact Email:</b>" + " " + Email +
+                          "<br />" +
+                          "<b>Contact Phone Number:</b>" + " " + PhoneNumber +
+                          "<br />" +
+                          "<b>Contact Fax:</b>" + " " + Fax +
+                          "<br />" +
+                          "<b>Message:</b>" + "<br />" + Message;
+            mail.Body = Body;
 
-                mail.IsBodyHtml = true;
-                SmtpClient smtp = new SmtpClient();
-                smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
-                smtp.Credentials = new System.Net.NetworkCredential
-                     ("signservicecontactform@gmail.com", "chichi123123");
-                //Or your Smtp Email ID and Password
-                smtp.EnableSsl = true;
-                smtp.Send(mail);
+            mail.IsBodyHtml = true;
+            SmtpClient smtp = new SmtpClient();
+            smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
+            smtp.Credentials = new System.Net.NetworkCredential
+            ("signservicecontactform@gmail.com", "chichi123123");
+            smtp.Port = 587;
+            //Or your Smtp Email ID and Password
+            smtp.EnableSsl = true;
+            smtp.Send(mail);
 
-                lblSubmitButtonMessageSent.Text = "Message Sent! Thank-you.";
+            lblSubmitButtonMessageSent.Text = "Message Sent! Thank-you.";
             //}
             //catch
             //{
             //    lblSubmitButtonMessageError.Text = "Something went wrong! Please try again.";
             //}
-            
+
         }
     }
 }

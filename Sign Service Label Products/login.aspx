@@ -24,13 +24,38 @@
                 </fieldset>
             </section>
             <section class="col-sm-12 col-md-4 col-lg-4 text-center"></section>
-
         </div>
         <!-- /.row -->
+        <section class="col-sm-12 col-md-12 col-lg-12 text-center">
+            <a href="#" data-toggle="modal" data-target="#forgot_password">Forgot Password?</a>
+        </section>
     </div>
     <!-- /.container -->
 
-    <!-- Modal -->
+    <!-- Forgot Password Modal -->
+    <div class="modal fade" id="forgot_password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Forgot Password?</h4>
+                </div>
+                <div class="modal-body">
+                    Please Contact Sign Service Label Products to recover your password.
+                    <h4><a href="tel:18007872382">1(800) 787-2382</a></h4>
+                    <p>OR</p>
+                    <h4><a href="mailto:sales@signservice.com">sales@signservice.com</a></h4>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- Sign Up Modal -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -45,7 +70,7 @@
                         <asp:TextBox ID="txtContactNameSignUp" runat="server" CssClass="form-control" />
                         <br />
                         <asp:Label ID="lblContactEmailSignUp" Text="Contact Email:" runat="server" />
-                        <asp:TextBox ID="txtContactEmailSignUp" runat="server" CssClass="form-control"/>
+                        <asp:TextBox ID="txtContactEmailSignUp" runat="server" CssClass="form-control" />
                         <br />
                         <asp:Label Text="Company Name:" runat="server" />
                         <asp:TextBox ID="txtCompanyNameSignUp" runat="server" CssClass="form-control" />
@@ -82,13 +107,6 @@
                         <asp:Label ID="lblConfirmPasswordSignUp" Text="Confirm Password:" runat="server" />
                         <asp:TextBox ID="txtConfirmPasswordSignUp" runat="server" CssClass="form-control" />
                     </fieldset>
-                    
-                    
-
-
-
-
-
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -97,4 +115,6 @@
             </div>
         </div>
     </div>
+
+
 </asp:Content>

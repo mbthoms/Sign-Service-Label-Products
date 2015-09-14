@@ -59,9 +59,7 @@
                     <li><a href="stocks.aspx">Stocks</a></li>
                     <li><a href="products.aspx">Products</a></li>
                     <li><a href="contact.aspx">Contact Us</a></li>
-                </ul>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><a href="login.aspx"><i class="fa fa-sign-in"></i>Dealer Login</a></li>
+                    <li><a href="login.aspx"><i class="fa fa-sign-in"></i> Dealer Login</a></li>
                 </ul>
             </div>
             <!-- End of nav-collapse -->
