@@ -13,13 +13,14 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Sign_Service_Label_Products</RootNamespace>
     <AssemblyName>Sign Service Label Products</AssemblyName>
-    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <UseIISExpress>true</UseIISExpress>
     <IISExpressSSLPort />
     <IISExpressAnonymousAuthentication />
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -39,65 +40,166 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.0.0\lib\net40\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
-    <Reference Include="System.Core" />
-    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Web.Extensions" />
-    <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.Web" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Web.Services" />
     <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Xml.Linq" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="404.aspx" />
     <Content Include="about.aspx" />
+    <Content Include="admin\admin_grid.aspx" />
+    <Content Include="admin\admin_login.aspx" />
+    <Content Include="admin\admin_logout.aspx" />
+    <Content Include="admin_auth.ascx" />
+    <Content Include="auth.ascx" />
     <Content Include="contact.aspx" />
     <Content Include="css\animate.css" />
     <Content Include="css\bootstrap.css" />
+    <Content Include="css\dropdowns-enhancement.css" />
     <Content Include="css\font-awesome.min.css" />
     <Content Include="css\print\printer_page_styles.css" />
     <Content Include="css\slider.css" />
-    <Content Include="Dealer\dealer_index.aspx" />
-    <Content Include="Dealer\dealer_faq.aspx" />
-    <Content Include="Dealer\vinyl_pricing.aspx" />
+    <Content Include="dealer\coroplast_pricing.aspx" />
+    <Content Include="dealer\digitally_printed_magnets_pricing.aspx" />
+    <Content Include="dealer\digitally_printed_vehicle_magnet_pricing.aspx" />
+    <Content Include="dealer\floor_graphics_pricing.aspx" />
+    <Content Include="dealer\fridge_magnet_pricing.aspx" />
+    <Content Include="dealer\hard_surface_mouse_pad_pricing.aspx" />
+    <Content Include="dealer\index.aspx" />
+    <Content Include="dealer\dealer_faq.aspx" />
+    <Content Include="dealer\digital_vinyl_pricing.aspx" />
+    <Content Include="dealer\matte_velvet_polycarbonate_pricing.aspx" />
+    <Content Include="dealer\parking_hang_tag_two_sided_pricing.aspx" />
+    <Content Include="dealer\parking_hang_tag_pricing.aspx" />
+    <Content Include="dealer\polyester_pricing.aspx" />
+    <Content Include="dealer\reflective_vinyl_pricing.aspx" />
+    <Content Include="dealer\solid_silver_foil_pricing.aspx" />
+    <Content Include="dealer\two_sided_coroplast_pricing.aspx" />
+    <Content Include="dealer\vinyl_lettered_vehicle_magnet_pricing.aspx" />
+    <Content Include="dealer\vinyl_pricing.aspx" />
     <Content Include="css\global_styles.css" />
+    <Content Include="dealer\single_sided_window_decal_pricing.aspx" />
     <Content Include="equipment.aspx" />
+    <Content Include="ErrorPage.aspx" />
     <Content Include="fonts\fontawesome-webfont.svg" />
-    <Content Include="img\dealer\vinyl_pricing\yellow_vinyl_backing.jpg" />
+    <Content Include="Global.asax" />
+    <Content Include="img\products\clear_decal.jpg" />
+    <Content Include="img\products\gold_label.jpg" />
+    <Content Include="img\products\hi_tack.jpg" />
+    <Content Include="img\about\signservice_door.jpg" />
+    <Content Include="img\products\door-mag.jpg" />
     <Content Include="img\equipment\printer_ink.jpg" />
     <Content Include="img\equipment\diecutting_press.jpg" />
     <Content Include="img\heros\index-hero.jpg" />
+    <Content Include="img\icons\favicon-32x32.png" />
     <Content Include="img\index\danger_high_voltage.jpg" />
-    <Content Include="img\index\stewarttown_school_meg.jpg" />
+    <Content Include="img\index\stewarttown.jpg" />
     <Content Include="img\products\corvette_decal.jpg" />
+    <Content Include="img\products\faceplate.jpg" />
     <Content Include="img\products\flower_meg.jpg" />
+    <Content Include="img\products\parking_hang_tag.jpg" />
+    <Content Include="img\products\silver_label.jpg" />
+    <Content Include="img\products\tattle_tale.jpg" />
     <Content Include="img\products\truck_meg.jpg" />
     <Content Include="img\products\stewarttown_school_meg.jpg" />
     <Content Include="img\products\vinyl_thumb.jpg" />
     <Content Include="img\sign_service_logo.svg" />
+    <Content Include="img\products\window_decal.jpg" />
     <Content Include="index.aspx" />
     <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\dropdowns-enhancement.js" />
     <Content Include="js\jquery.min.js" />
     <Content Include="login.aspx" />
+    <Content Include="logout.aspx" />
     <Content Include="stocks.aspx" />
     <Content Include="products.aspx" />
+    <Content Include="dealer\two_sided_window_decals_pricing.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="404.aspx.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="404.aspx.designer.cs">
+      <DependentUpon>404.aspx</DependentUpon>
+    </Compile>
     <Compile Include="about.aspx.cs">
       <DependentUpon>about.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="about.aspx.designer.cs">
       <DependentUpon>about.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admin.Master.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin.Master.designer.cs">
+      <DependentUpon>admin.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\AdminLoggedIn.Master.cs">
+      <DependentUpon>AdminLoggedIn.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\AdminLoggedIn.Master.designer.cs">
+      <DependentUpon>AdminLoggedIn.Master</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admin_grid.aspx.cs">
+      <DependentUpon>admin_grid.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin_grid.aspx.designer.cs">
+      <DependentUpon>admin_grid.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admin_login.aspx.cs">
+      <DependentUpon>admin_login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin_login.aspx.designer.cs">
+      <DependentUpon>admin_login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin\admin_logout.aspx.cs">
+      <DependentUpon>admin_logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin\admin_logout.aspx.designer.cs">
+      <DependentUpon>admin_logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="admin_auth.ascx.cs">
+      <DependentUpon>admin_auth.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="admin_auth.ascx.designer.cs">
+      <DependentUpon>admin_auth.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="auth.ascx.cs">
+      <DependentUpon>auth.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="auth.ascx.designer.cs">
+      <DependentUpon>auth.ascx</DependentUpon>
     </Compile>
     <Compile Include="contact.aspx.cs">
       <DependentUpon>contact.aspx</DependentUpon>
@@ -106,33 +208,145 @@
     <Compile Include="contact.aspx.designer.cs">
       <DependentUpon>contact.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dealer\dealer_index.aspx.cs">
-      <DependentUpon>dealer_index.aspx</DependentUpon>
+    <Compile Include="dealer\coroplast_pricing.aspx.cs">
+      <DependentUpon>coroplast_pricing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dealer\dealer_index.aspx.designer.cs">
-      <DependentUpon>dealer_index.aspx</DependentUpon>
+    <Compile Include="dealer\coroplast_pricing.aspx.designer.cs">
+      <DependentUpon>coroplast_pricing.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dealer\dealer_faq.aspx.cs">
+    <Compile Include="dealer\digitally_printed_magnets_pricing.aspx.cs">
+      <DependentUpon>digitally_printed_magnets_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\digitally_printed_magnets_pricing.aspx.designer.cs">
+      <DependentUpon>digitally_printed_magnets_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\digitally_printed_vehicle_magnet_pricing.aspx.cs">
+      <DependentUpon>digitally_printed_vehicle_magnet_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\digitally_printed_vehicle_magnet_pricing.aspx.designer.cs">
+      <DependentUpon>digitally_printed_vehicle_magnet_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\floor_graphics_pricing.aspx.cs">
+      <DependentUpon>floor_graphics_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\floor_graphics_pricing.aspx.designer.cs">
+      <DependentUpon>floor_graphics_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\fridge_magnet_pricing.aspx.cs">
+      <DependentUpon>fridge_magnet_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\fridge_magnet_pricing.aspx.designer.cs">
+      <DependentUpon>fridge_magnet_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\hard_surface_mouse_pad_pricing.aspx.cs">
+      <DependentUpon>hard_surface_mouse_pad_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\hard_surface_mouse_pad_pricing.aspx.designer.cs">
+      <DependentUpon>hard_surface_mouse_pad_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\index.aspx.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\index.aspx.designer.cs">
+      <DependentUpon>index.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\dealer_faq.aspx.cs">
       <DependentUpon>dealer_faq.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dealer\dealer_faq.aspx.designer.cs">
+    <Compile Include="dealer\dealer_faq.aspx.designer.cs">
       <DependentUpon>dealer_faq.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Dealer\DealerLogin.Master.cs">
+    <Compile Include="dealer\DealerLogin.Master.cs">
       <DependentUpon>DealerLogin.Master</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dealer\DealerLogin.Master.designer.cs">
+    <Compile Include="dealer\DealerLogin.Master.designer.cs">
       <DependentUpon>DealerLogin.Master</DependentUpon>
     </Compile>
-    <Compile Include="Dealer\vinyl_pricing.aspx.cs">
+    <Compile Include="dealer\digital_vinyl_pricing.aspx.cs">
+      <DependentUpon>digital_vinyl_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\digital_vinyl_pricing.aspx.designer.cs">
+      <DependentUpon>digital_vinyl_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\matte_velvet_polycarbonate_pricing.aspx.cs">
+      <DependentUpon>matte_velvet_polycarbonate_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\matte_velvet_polycarbonate_pricing.aspx.designer.cs">
+      <DependentUpon>matte_velvet_polycarbonate_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\parking_hang_tag_two_sided_pricing.aspx.cs">
+      <DependentUpon>parking_hang_tag_two_sided_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\parking_hang_tag_two_sided_pricing.aspx.designer.cs">
+      <DependentUpon>parking_hang_tag_two_sided_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\parking_hang_tag_pricing.aspx.cs">
+      <DependentUpon>parking_hang_tag_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\parking_hang_tag_pricing.aspx.designer.cs">
+      <DependentUpon>parking_hang_tag_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\polyester_pricing.aspx.cs">
+      <DependentUpon>polyester_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\polyester_pricing.aspx.designer.cs">
+      <DependentUpon>polyester_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\reflective_vinyl_pricing.aspx.cs">
+      <DependentUpon>reflective_vinyl_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\reflective_vinyl_pricing.aspx.designer.cs">
+      <DependentUpon>reflective_vinyl_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\solid_silver_foil_pricing.aspx.cs">
+      <DependentUpon>solid_silver_foil_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\solid_silver_foil_pricing.aspx.designer.cs">
+      <DependentUpon>solid_silver_foil_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\two_sided_coroplast_pricing.aspx.cs">
+      <DependentUpon>two_sided_coroplast_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\two_sided_coroplast_pricing.aspx.designer.cs">
+      <DependentUpon>two_sided_coroplast_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\vinyl_lettered_vehicle_magnet_pricing.aspx.cs">
+      <DependentUpon>vinyl_lettered_vehicle_magnet_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\vinyl_lettered_vehicle_magnet_pricing.aspx.designer.cs">
+      <DependentUpon>vinyl_lettered_vehicle_magnet_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\vinyl_pricing.aspx.cs">
       <DependentUpon>vinyl_pricing.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Dealer\vinyl_pricing.aspx.designer.cs">
+    <Compile Include="dealer\vinyl_pricing.aspx.designer.cs">
       <DependentUpon>vinyl_pricing.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="dealer\single_sided_window_decal_pricing.aspx.cs">
+      <DependentUpon>single_sided_window_decal_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\single_sided_window_decal_pricing.aspx.designer.cs">
+      <DependentUpon>single_sided_window_decal_pricing.aspx</DependentUpon>
     </Compile>
     <Compile Include="equipment.aspx.cs">
       <DependentUpon>equipment.aspx</DependentUpon>
@@ -140,6 +354,16 @@
     </Compile>
     <Compile Include="equipment.aspx.designer.cs">
       <DependentUpon>equipment.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ErrorPage.aspx.designer.cs">
+      <DependentUpon>ErrorPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="index.aspx.cs">
       <DependentUpon>index.aspx</DependentUpon>
@@ -154,6 +378,34 @@
     </Compile>
     <Compile Include="login.aspx.designer.cs">
       <DependentUpon>login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="logout.aspx.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="logout.aspx.designer.cs">
+      <DependentUpon>logout.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\admin_users.cs">
+      <DependentUpon>Sign Service Label Products.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\public_users.cs">
+      <DependentUpon>Sign Service Label Products.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sign Service Label Products.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sign Service Label Products.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sign Service Label Products.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sign Service Label Products.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Sign Service Label Products.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Sign Service Label Products.edmx</DependentUpon>
     </Compile>
     <Compile Include="Public.Master.cs">
       <DependentUpon>Public.Master</DependentUpon>
@@ -177,15 +429,44 @@
     <Compile Include="products.aspx.designer.cs">
       <DependentUpon>products.aspx</DependentUpon>
     </Compile>
+    <Compile Include="dealer\two_sided_window_decals_pricing.aspx.cs">
+      <DependentUpon>two_sided_window_decals_pricing.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="dealer\two_sided_window_decals_pricing.aspx.designer.cs">
+      <DependentUpon>two_sided_window_decals_pricing.aspx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Public.Master" />
-    <Content Include="Dealer\DealerLogin.Master" />
+    <Content Include="dealer\DealerLogin.Master" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.woff" />
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="packages.config" />
+    <Content Include="admin\admin.Master" />
+    <Content Include="admin\AdminLoggedIn.Master" />
+    <EntityDeploy Include="Models\Sign Service Label Products.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Sign Service Label Products.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Sign Service Label Products.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Sign Service Label Products.edmx</DependentUpon>
+      <LastGenOutput>Sign Service Label Products.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Sign Service Label Products.edmx.diagram">
+      <DependentUpon>Sign Service Label Products.edmx</DependentUpon>
+    </Content>
+    <Content Include="Models\Sign Service Label Products.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Sign Service Label Products.edmx</DependentUpon>
+      <LastGenOutput>Sign Service Label Products.cs</LastGenOutput>
+    </Content>
+    <None Include="Properties\PublishProfiles\Public Locally.pubxml" />
+    <None Include="Properties\PublishProfiles\Sign Service Label Products.pubxml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -193,7 +474,12 @@
       <DependentUpon>Web.config</DependentUpon>
     </None>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="img\dealer\" />
+  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

@@ -13,6 +13,15 @@ namespace Sign_Service_Label_Products.Dealer.Pricing {
     public partial class vinyl_pricing {
         
         /// <summary>
+        /// auth control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Sign_Service_Label_Products.auth auth;
+        
+        /// <summary>
         /// lblStock control.
         /// </summary>
         /// <remarks>
@@ -38,6 +47,15 @@ namespace Sign_Service_Label_Products.Dealer.Pricing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator1;
+        
+        /// <summary>
+        /// rblCornerCutOption control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RadioButtonList rblCornerCutOption;
         
         /// <summary>
         /// lblLabelHeight control.
@@ -67,6 +85,15 @@ namespace Sign_Service_Label_Products.Dealer.Pricing {
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator2;
         
         /// <summary>
+        /// RangeValidator1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator1;
+        
+        /// <summary>
         /// txtLabelWidth control.
         /// </summary>
         /// <remarks>
@@ -83,6 +110,15 @@ namespace Sign_Service_Label_Products.Dealer.Pricing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator3;
+        
+        /// <summary>
+        /// RangeValidator2 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator2;
         
         /// <summary>
         /// lblNumberOfColours control.
@@ -110,6 +146,15 @@ namespace Sign_Service_Label_Products.Dealer.Pricing {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.RequiredFieldValidator RequiredFieldValidator4;
+        
+        /// <summary>
+        /// RangeValidator3 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.RangeValidator RangeValidator3;
         
         /// <summary>
         /// lblLabelQuantities control.
@@ -148,13 +193,13 @@ namespace Sign_Service_Label_Products.Dealer.Pricing {
         protected global::System.Web.UI.WebControls.DropDownList ddlLamination;
         
         /// <summary>
-        /// btnFindPrice control.
+        /// btnFindPrices control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnFindPrice;
+        protected global::System.Web.UI.WebControls.LinkButton btnFindPrices;
         
         /// <summary>
         /// lblPriceWithoutLamination control.
