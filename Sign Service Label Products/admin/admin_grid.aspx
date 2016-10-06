@@ -1,4 +1,4 @@
-﻿<%@ Page Title="Admin Grid - Admin - Sign Service Label Products" Language="C#" MasterPageFile="~/admin/AdminLoggedIn.Master" AutoEventWireup="true" CodeBehind="admin_grid.aspx.cs" Inherits="Sign_Service_Label_Products.admin.admin_grid" %>
+﻿<%@ Page Title="Admin List - Admin - Sign Service Label Products" Language="C#" MasterPageFile="~/admin/AdminLoggedIn.Master" AutoEventWireup="true" CodeBehind="admin_grid.aspx.cs" Inherits="Sign_Service_Label_Products.admin.admin_grid" %>
 
 <%@ Register Src="~/admin_auth.ascx" TagPrefix="uc1" TagName="admin_auth" %>
 
@@ -13,7 +13,7 @@
         <div class="page-header">
             <h1>List of Users</h1>
         </div>
-        <div class="alert alert-info" role="alert"><strong>Instructions:</strong> To Delete a user simply click the delete button. Once Clicked confirm the deletion of the user.</div>
+        <div class="alert alert-info" role="alert"><strong>Instructions:</strong> To delete a user simply click the delete button. Once clicked confirm the deletion of the user.</div>
        
     <asp:GridView runat="server" ID="grdPublicUsers" CssClass="table table-striped table-hover" AutoGenerateColumns="false" OnRowDeleting="grdPublicUsers_RowDeleting" DataKeyNames="user_id">
         <Columns>
