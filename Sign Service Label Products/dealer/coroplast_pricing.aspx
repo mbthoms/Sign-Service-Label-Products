@@ -1,7 +1,11 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/dealer/DealerLogin.Master" AutoEventWireup="true" CodeBehind="coroplast_pricing.aspx.cs" Inherits="Sign_Service_Label_Products.dealer.coroplast_pricing" %>
+
+<%@ Register Src="~/auth.ascx" TagPrefix="uc1" TagName="auth" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
+    <uc1:auth runat="server" ID="auth" />
     <div class="container cd-container" id="nav_bar">
         <div class="col-sm-12 col-md-12 col-lg-12">
             <div class="row">
@@ -33,7 +37,7 @@
                 =================================================================================================================================================================== -->
                 <fieldset class="fieldset-label-size">
                     <legend>Sign Size</legend>
-                    <asp:Label ID="lblLabelSize" Text="Label Size:" runat="server" />
+                    <asp:Label ID="lblLabelSize" Text="Sign Size:" runat="server" />
                     <asp:DropDownList ID="ddlLabelSize" runat="server" CssClass="form-control">
                         <asp:ListItem Text="-Select-" Value="0" />
                         <asp:ListItem Text="12x12" Value="1" />
@@ -41,7 +45,7 @@
                         <asp:ListItem Text="16x24" Value="3" />
                         <asp:ListItem Text="18x24" Value="4" />
                         <asp:ListItem Text="24x24" Value="5" />
-                        <asp:ListItem Text="18x32" Value="6" />
+                        <asp:ListItem Text="24x32" Value="6" />
                     </asp:DropDownList>
                     <asp:Label Text="Sizes are in inches." runat="server" CssClass="label label-info" />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="ddlLabelSize" runat="server" InitialValue="0" ErrorMessage="Label Size is Required." CssClass="label label-danger"></asp:RequiredFieldValidator>

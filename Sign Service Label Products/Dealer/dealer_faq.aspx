@@ -37,7 +37,7 @@
                         </div>
                         <div id="collapseTwo" class="panel-collapse collapse">
                             <div class="panel-body">
-                                <p>We accept Visa, Mastercard or Company Cheque for first order C.O.D.</p>
+                                <p>We accept Visa, Master card or Company cheque. First orders are COD.</p>
                                 <span class="fa fa-cc-visa fa-3x"></span> <span class="fa fa-cc-mastercard fa-3x"></span>
                             </div>
                         </div>

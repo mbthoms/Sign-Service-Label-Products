@@ -23,7 +23,7 @@
                 <fieldset>
                     <legend>Side Options</legend>
                     <asp:DropDownList ID="ddlSideOption" runat="server" CssClass="form-control">
-                        <asp:ListItem Text="One Sided" Value="1" />
+                        <asp:ListItem Text="Two Sided" Value="1" />
                     </asp:DropDownList>
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="ddlSideOption" InitialValue="0" runat="server" ErrorMessage="Side Option Required." CssClass="label label-danger"></asp:RequiredFieldValidator>
                 </fieldset>
@@ -33,7 +33,7 @@
                 =================================================================================================================================================================== -->
                 <fieldset class="fieldset-label-size">
                     <legend>Sign Size</legend>
-                    <asp:Label ID="lblLabelSize" Text="Label Size:" runat="server" />
+                    <asp:Label ID="lblLabelSize" Text="Sign Size:" runat="server" />
                     <asp:DropDownList ID="ddlLabelSize" runat="server" CssClass="form-control">
                         <asp:ListItem Text="-Select-" Value="0" />
                         <asp:ListItem Text="12x12" Value="1" />
@@ -41,7 +41,7 @@
                         <asp:ListItem Text="16x24" Value="3" />
                         <asp:ListItem Text="18x24" Value="4" />
                         <asp:ListItem Text="24x24" Value="5" />
-                        <asp:ListItem Text="18x32" Value="6" />
+                        <asp:ListItem Text="24x32" Value="6" />
                     </asp:DropDownList>
                     <asp:Label Text="Sizes are in inches." runat="server" CssClass="label label-info" />
                     <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="ddlLabelSize" runat="server" InitialValue="0" ErrorMessage="Label Size is Required." CssClass="label label-danger"></asp:RequiredFieldValidator>

@@ -84,12 +84,12 @@
                         <br />
                         <asp:Label ID="lblContactPhoneNumberSignUp" Text="Contact Phone Number:" runat="server" />
                         <asp:TextBox ID="txtContactPhoneNumberSignUp" runat="server" CssClass="form-control" />
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ValidationGroup="ValSignUp" ControlToValidate="txtContactPhoneNumberSignUp" runat="server" ErrorMessage="Not a vaild phone number." ValidationExpression="^[01]?[- .]?(\([2-9]\d{2}\)|[2-9]\d{2})[- .]?\d{3}[- .]?\d{4}$" CssClass="label label-danger"></asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator1" ValidationGroup="ValSignUp" ControlToValidate="txtContactPhoneNumberSignUp" runat="server" ErrorMessage="Not a vaild phone number. Please use this format: 5555555555" ValidationExpression="^[01]?[- .]?(\([2-9]\d{2}\)|[2-9]\d{2})[- .]?\d{3}[- .]?\d{4}$" CssClass="label label-danger"></asp:RegularExpressionValidator>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator4" ValidationGroup="ValSignUp" runat="server" ControlToValidate="txtContactPhoneNumberSignUp" ErrorMessage="Phone Number is Requried." CssClass="label label-danger"></asp:RequiredFieldValidator>
                         <br />
                         <asp:Label ID="lblContactFaxSignUp" Text="Fax:" runat="server" />
                         <asp:TextBox ID="txtContactFaxSignUp" runat="server" CssClass="form-control" />
-                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ValidationGroup="ValSignUp" ControlToValidate="txtContactFaxSignUp" runat="server" ErrorMessage="Not a vaild Fax number." ValidationExpression="^[01]?[- .]?(\([2-9]\d{2}\)|[2-9]\d{2})[- .]?\d{3}[- .]?\d{4}$" CssClass="label label-danger"></asp:RegularExpressionValidator>
+                        <asp:RegularExpressionValidator ID="RegularExpressionValidator2" ValidationGroup="ValSignUp" ControlToValidate="txtContactFaxSignUp" runat="server" ErrorMessage="Not a vaild Fax number. Please use this format: 5555555555" ValidationExpression="^[01]?[- .]?(\([2-9]\d{2}\)|[2-9]\d{2})[- .]?\d{3}[- .]?\d{4}$" CssClass="label label-danger"></asp:RegularExpressionValidator>
                     </fieldset>
 
                     <fieldset>

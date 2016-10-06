@@ -91,7 +91,7 @@ namespace Sign_Service_Label_Products
 
                         //Rediect to logged in homepage.
                         Response.Redirect("dealer/index.aspx");
-                     }
+                    }
                     else
                     {
                         lblSubmitLoginMessageError.Text = "Invaild Login, the Email or Password may be wrong.";
@@ -127,7 +127,7 @@ namespace Sign_Service_Label_Products
                 objI.city = txtCitySignUp.Text;
                 objI.state_province = txtStateProvinceSignUp.Text;
                 objI.zip_postal = txtZipPostalSignUp.Text;
-                
+
                 //Salt and Hash the plan text Password.
                 String password = txtPasswordSignUp.Text;
                 String salt = CreateSalt(8);
@@ -171,54 +171,55 @@ namespace Sign_Service_Label_Products
             String ZipPostal = txtZipPostalSignUp.Text;
             String Password = txtPasswordSignUp.Text;
 
+
             try
             {
-            MailMessage mail = new MailMessage();
-            mail.To.Add("matthew@matthewthoms.com"); //Change to sales@signservice.com when launching.
-            mail.From = new MailAddress("signservicecontactform@gmail.com");
-            mail.Subject = "New Dealer Signed Up: " + Name + " from " + CompanyName;
+                MailMessage mail = new MailMessage();
+                mail.To.Add("matthew@matthewthoms.com"); //Change to sales@signservice.com when launching.
+                mail.From = new MailAddress("forms@signservicelabelproducts.com");
+                mail.Subject = "New Dealer Signed Up: " + Name + " from " + CompanyName;
 
-            string Body = "<h1>New Dealer Signed Up</h1>" +
-                          "<br />" +
-                          "<b>Name:</b>" + " " + Name +
-                          "<br />" +
-                          "<b>Comapny Name:</b>" + " " + CompanyName +
-                          "<br />" +
-                          "<b>Contact Email:</b>" + " " + Email +
-                          "<br />" +
-                          "<b>Contact Phone Number:</b>" + " " + PhoneNumber +
-                          "<br />" +
-                          "<b>Contact Fax:</b>" + " " + Fax +
-                          "<br />" +
-                          "<h2>Address</h2>" +
-                          "<b>Address Line 1:</b>" + "<br />" + AddressLine1 +
-                          "<br />" +
-                          "<b>Address Line 2:</b>" + "<br />" + AddressLine2 +
-                          "<br />" +
-                          "<b>City:</b>" + "<br />" + City +
-                          "<br />" +
-                          "<b>State / Province:</b>" + "<br />" + StateProvince +
-                          "<br />" +
-                          "<b>Zip Code / Postal Code:</b>" + "<br />" + AddressLine1 +
-                          "<br />" +
-                          "<h2>Password</h2>" +
-                          "<b>Password:</b>" + "<br />" + Password + 
-                          "br />" +
-                          "<h2>Manage Users</h2>" +
-                          "<a href='http://signservice.com/admin/admin_login.aspx'>Manage Users</a>";
-            mail.Body = Body;
+                string Body = "<h1>New Dealer Signed Up</h1>" +
+                              "<br />" +
+                              "<b>Name:</b>" + " " + Name +
+                              "<br />" +
+                              "<b>Comapny Name:</b>" + " " + CompanyName +
+                              "<br />" +
+                              "<b>Contact Email:</b>" + " " + Email +
+                              "<br />" +
+                              "<b>Contact Phone Number:</b>" + " " + PhoneNumber +
+                              "<br />" +
+                              "<b>Contact Fax:</b>" + " " + Fax +
+                              "<br />" +
+                              "<h2>Address</h2>" +
+                              "<b>Address Line 1:</b>" + "<br />" + AddressLine1 +
+                              "<br />" +
+                              "<b>Address Line 2:</b>" + "<br />" + AddressLine2 +
+                              "<br />" +
+                              "<b>City:</b>" + "<br />" + City +
+                              "<br />" +
+                              "<b>State / Province:</b>" + "<br />" + StateProvince +
+                              "<br />" +
+                              "<b>Zip Code / Postal Code:</b>" + "<br />" + AddressLine1 +
+                              "<br />" +
+                              "<h2>Password</h2>" +
+                              "<b>Password:</b>" + "<br />" + Password +
+                              "<br />" +
+                              "<h2>Manage Users</h2>" +
+                              "<a href='http://signservice.com/admin/admin_login.aspx'>Manage Users</a>";
+                mail.Body = Body;
 
-            mail.IsBodyHtml = true;
-            SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
-            smtp.Credentials = new System.Net.NetworkCredential
-            ("signservicecontactform@gmail.com", "chichi123123");
-            smtp.Port = 587;
-            //Or your Smtp Email ID and Password
-            smtp.EnableSsl = true;
-            smtp.Send(mail);
+                mail.IsBodyHtml = true;
+                SmtpClient smtp = new SmtpClient();
+                smtp.Host = "mail.signservicelabelproducts.com"; //Or Your SMTP Server Address
+                smtp.Credentials = new System.Net.NetworkCredential
+                ("forms@signservicelabelproducts.com", "3Mavsol3*");
+                smtp.Port = 1025;
+                //Or your Smtp Email ID and Password
+                smtp.EnableSsl = false;
+                smtp.Send(mail);
 
-            lblSubmitSignUpMessage.Text = "Account Created! You can now Login.";
+                lblSubmitSignUpMessage.Text = "You can sign in now.";
             }
             catch
             {

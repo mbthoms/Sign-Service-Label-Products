@@ -11,7 +11,7 @@ namespace Sign_Service_Label_Products
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            lblLoginNavName.Text = "Signed in as " + Session["contact_name"];
         }
     }
 }

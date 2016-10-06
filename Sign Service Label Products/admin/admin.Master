@@ -18,9 +18,9 @@
     <!-- Google Fonts -->
     <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400' rel='stylesheet' type='text/css'>
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="../img/icons/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="../img/icons/favicon-32x32.png" sizes="32x32">
     <!--Custom CSS -->
-    <link href="../css/global_styles.css" rel="stylesheet" />
+    <link href="../css/global_styles.css" rel="stylesheet">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -54,13 +54,13 @@
             </div>
             <div id="navbar" class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li><a href="index.aspx">Home</a></li>
-                    <li><a href="about.aspx">About</a></li>
-                    <li><a href="equipment.aspx">Equipment</a></li>
-                    <li><a href="stocks.aspx">Stocks</a></li>
-                    <li><a href="products.aspx">Products</a></li>
-                    <li><a href="contact.aspx">Contact Us</a></li>
-                    <li><a href="login.aspx"><i class="fa fa-sign-in"></i> Dealer Login</a></li>
+                    <li><a href="../index.aspx">Home</a></li>
+                    <li><a href="../about.aspx">About</a></li>
+                    <li><a href="../equipment.aspx">Equipment</a></li>
+                    <li><a href="../stocks.aspx">Stocks</a></li>
+                    <li><a href="../products.aspx">Products</a></li>
+                    <li><a href="../contact.aspx">Contact Us</a></li>
+                    <li><a href="../login.aspx"><i class="fa fa-sign-in"></i> Dealer Login</a></li>
                 </ul>
             </div>
             <!-- End of nav-collapse -->

@@ -232,7 +232,7 @@
                                     <p>This product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand temperatures of -30ºF to +200ºF.</p>
                                 </section>
                                 <section id="clear-polyester">
-                                    <h2>Clear Polyester (Maylar®)</h2>
+                                    <h2>Clear Polyester (Mylar®)</h2>
                                     <p>.002" Clear Polyester (Mylar®) has a wide variety of uses it is an ideal choice for P.O.P displays to product markings. It has a permanent adhesive with a clear finish stock and is ideal for higher temperature uses.</p>
                                     <p>This product is good for application above 50ºF but once the adhesive has set for 72 hours it can withstand outdoor temperatures of -40ºF to +250ºF and has a indoor / outdoor life of 2 - 3 years.</p>
                                 </section>

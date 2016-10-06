@@ -30,7 +30,7 @@ namespace Sign_Service_Label_Products
             MailMessage mail = new MailMessage();
             mail.To.Add("matthew@matthewthoms.com"); //Change to sales@signservice.com when launching.
             mail.To.Add(Email);
-            mail.From = new MailAddress("signservicecontactform@gmail.com");
+            mail.From = new MailAddress("forms@signservicelabelproducts.com");
             mail.Subject = Subject;
 
             string Body = "<h1>Message from Contact Form</h1>" +
@@ -50,12 +50,12 @@ namespace Sign_Service_Label_Products
 
             mail.IsBodyHtml = true;
             SmtpClient smtp = new SmtpClient();
-            smtp.Host = "smtp.gmail.com"; //Or Your SMTP Server Address
+            smtp.Host = "mail.signservicelabelproducts.com"; //Or Your SMTP Server Address
             smtp.Credentials = new System.Net.NetworkCredential
-            ("signservicecontactform@gmail.com", "chichi123123");
-            smtp.Port = 587;
+            ("forms@signservicelabelproducts.com", "3Mavsol3*");
+            smtp.Port = 1025;
             //Or your Smtp Email ID and Password
-            smtp.EnableSsl = true;
+            smtp.EnableSsl = false;
             smtp.Send(mail);
 
             lblSubmitButtonMessageSent.Text = "Message Sent! Thank-you.";

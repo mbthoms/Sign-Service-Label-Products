@@ -21,66 +21,66 @@ namespace Sign_Service_Label_Products.dealer
         protected void btnFindPrices_Click(object sender, EventArgs e)
         {
             //======================================================================================================
-            //Side 1 Pricing
+            //Side 2 Pricing
             //======================================================================================================
 
             //25 Quantity
-            Double Side1_Size12x12_25Quantity = 245.00;
-            Double Side1_Size12x24_25Quantity = 263.00;
-            Double Side1_Size16x24_25Quantity = 290.00;
-            Double Side1_Size18x24_25Quantity = 313.00;
-            Double Side1_Size24x24_25Quantity = 323.00;
-            Double Side1_Size24x32_25Quantity = 347.00;
+            Double Side2_Size12x12_25Quantity = 295.00;
+            Double Side2_Size12x24_25Quantity = 313.00;
+            Double Side2_Size16x24_25Quantity = 340.00;
+            Double Side2_Size18x24_25Quantity = 363.00;
+            Double Side2_Size24x24_25Quantity = 373.00;
+            Double Side2_Size24x32_25Quantity = 397.00;
             //Color, 25 Quantity.
-            Double Side1_25Quantity_SmallPress_Color = 55.00;
-            Double Side1_25Quantity_LargePress_Color = 105.00;
-            
+            Double Side2_25Quantity_SmallPress_Color = 105.00;
+            Double Side2_25Quantity_LargePress_Color = 115.00;
+
 
             //50 Quantity
-            Double Side1_Size12x12_50Quantity = 269.00;
-            Double Side1_Size12x24_50Quantity = 298.00;
-            Double Side1_Size16x24_50Quantity = 339.00;
-            Double Side1_Size18x24_50Quantity = 386.00;
-            Double Side1_Size24x24_50Quantity = 425.00;
-            Double Side1_Size24x32_50Quantity = 443.00;
+            Double Side2_Size12x12_50Quantity = 334.00;
+            Double Side2_Size12x24_50Quantity = 363.00;
+            Double Side2_Size16x24_50Quantity = 404.00;
+            Double Side2_Size18x24_50Quantity = 451.00;
+            Double Side2_Size24x24_50Quantity = 490.00;
+            Double Side2_Size24x32_50Quantity = 508.00;
             //Color, 50 Quantity.
-            Double Side1_50Quantity_SmallPress_Color = 60.00;
-            Double Side1_50Quantity_LargePress_Color = 115.00;
+            Double Side2_50Quantity_SmallPress_Color = 130.00;
+            Double Side2_50Quantity_LargePress_Color = 150.00;
 
             //100 Quantity
-            Double Side1_Size12x12_100Quantity = 352.00;
-            Double Side1_Size12x24_100Quantity = 355.00;
-            Double Side1_Size16x24_100Quantity = 423.00;
-            Double Side1_Size18x24_100Quantity = 505.00;
-            Double Side1_Size24x24_100Quantity = 543.00;
-            Double Side1_Size24x32_100Quantity = 595.00;
+            Double Side2_Size12x12_100Quantity = 442.00;
+            Double Side2_Size12x24_100Quantity = 445.00;
+            Double Side2_Size16x24_100Quantity = 513.00;
+            Double Side2_Size18x24_100Quantity = 595.00;
+            Double Side2_Size24x24_100Quantity = 633.00;
+            Double Side2_Size24x32_100Quantity = 685.00;
             //Color, 100 Quantity.
-            Double Side1_100Quantity_SmallPress_Color = 65.00;
-            Double Side1_100Quantity_LargePress_Color = 125.00;
+            Double Side2_100Quantity_SmallPress_Color = 150.00;
+            Double Side2_100Quantity_LargePress_Color = 200.00;
 
             //200 Quantity
-            Double Side1_Size12x12_200Quantity = 415.00;
-            Double Side1_Size12x24_200Quantity = 468.00;
-            Double Side1_Size16x24_200Quantity = 591.00;
-            Double Side1_Size18x24_200Quantity = 741.00;
-            Double Side1_Size24x24_200Quantity = 779.00;
-            Double Side1_Size24x32_200Quantity = 899.00;
+            Double Side2_Size12x12_200Quantity = 595.00;
+            Double Side2_Size12x24_200Quantity = 648.00;
+            Double Side2_Size16x24_200Quantity = 771.00;
+            Double Side2_Size18x24_200Quantity = 921.00;
+            Double Side2_Size24x24_200Quantity = 959.00;
+            Double Side2_Size24x32_200Quantity = 1079.00;
             //Color, 200 Quantity.
-            Double Side1_200Quantity_SmallPress_Color = 70.00;
-            Double Side1_200Quantity_LargePress_Color = 140.00;
+            Double Side2_200Quantity_SmallPress_Color = 180.00;
+            Double Side2_200Quantity_LargePress_Color = 270.00;
 
             //500 Quantity
-            Double Side1_Size12x12_500Quantity = 680.00;
-            Double Side1_Size12x24_500Quantity = 875.00;
-            Double Side1_Size16x24_500Quantity = 1219.00;
-            Double Side1_Size18x24_500Quantity = 1595.00;
-            Double Side1_Size24x24_500Quantity = 1629.00;
-            Double Side1_Size24x32_500Quantity = 1972.00;
+            Double Side2_Size12x12_500Quantity = 995.00;
+            Double Side2_Size12x24_500Quantity = 1180.00;
+            Double Side2_Size16x24_500Quantity = 1524.00;
+            Double Side2_Size18x24_500Quantity = 1900.00;
+            Double Side2_Size24x24_500Quantity = 1934.00;
+            Double Side2_Size24x32_500Quantity = 2277.00;
             //Color, 500 Quantity.
-            Double Side1_500Quantity_SmallPress_Color = 80.00;
-            Double Side1_500Quantity_LargePress_Color = 155.00;
+            Double Side2_500Quantity_SmallPress_Color = 305.00;
+            Double Side2_500Quantity_LargePress_Color = 585.00;
 
-           
+
             //========================================================================================================
             //Number of Colours
             //========================================================================================================
@@ -88,7 +88,7 @@ namespace Sign_Service_Label_Products.dealer
             Decimal NumberOfColors = Convert.ToDecimal(txtNumberOfColours.Text) + Convert.ToDecimal(txtBackColours.Text) - 2;
 
 
-            //1 Sided If Statements
+            //2 Sided If Statements
             //======================================================================================================
             if (ddlSideOption.SelectedValue == "1")
             {
@@ -100,10 +100,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "1" && ddlLabelQuantities.SelectedValue == "25")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size12x12_25Quantity;
+                    Subtotal = Side2_Size12x12_25Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_25Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_25Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -119,10 +119,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "1" && ddlLabelQuantities.SelectedValue == "50")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size12x12_50Quantity;
+                    Subtotal = Side2_Size12x12_50Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_50Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_50Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -138,10 +138,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "1" && ddlLabelQuantities.SelectedValue == "100")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size12x12_100Quantity;
+                    Subtotal = Side2_Size12x12_100Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_100Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_100Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -157,10 +157,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "1" && ddlLabelQuantities.SelectedValue == "200")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size12x12_200Quantity;
+                    Subtotal = Side2_Size12x12_200Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_200Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_200Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -176,10 +176,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "1" && ddlLabelQuantities.SelectedValue == "500")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size12x12_500Quantity;
+                    Subtotal = Side2_Size12x12_500Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_500Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_500Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -199,10 +199,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "2" && ddlLabelQuantities.SelectedValue == "25")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size12x24_25Quantity;
+                    Subtotal = Side2_Size12x24_25Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_25Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_25Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -218,10 +218,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "2" && ddlLabelQuantities.SelectedValue == "50")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size12x24_50Quantity;
+                    Subtotal = Side2_Size12x24_50Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_50Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_50Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -237,10 +237,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "2" && ddlLabelQuantities.SelectedValue == "100")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size12x24_100Quantity;
+                    Subtotal = Side2_Size12x24_100Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_100Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_100Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -256,10 +256,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "2" && ddlLabelQuantities.SelectedValue == "200")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size12x24_200Quantity;
+                    Subtotal = Side2_Size12x24_200Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_200Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_200Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -275,10 +275,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "2" && ddlLabelQuantities.SelectedValue == "500")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size12x24_500Quantity;
+                    Subtotal = Side2_Size12x24_500Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_500Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_500Quantity_SmallPress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -297,10 +297,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "3" && ddlLabelQuantities.SelectedValue == "25")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size16x24_25Quantity;
+                    Subtotal = Side2_Size16x24_25Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_25Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_25Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -316,10 +316,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "3" && ddlLabelQuantities.SelectedValue == "50")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size16x24_50Quantity;
+                    Subtotal = Side2_Size16x24_50Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_50Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_50Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -335,10 +335,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "3" && ddlLabelQuantities.SelectedValue == "100")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size16x24_100Quantity;
+                    Subtotal = Side2_Size16x24_100Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_100Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_100Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -354,10 +354,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "3" && ddlLabelQuantities.SelectedValue == "200")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size16x24_200Quantity;
+                    Subtotal = Side2_Size16x24_200Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_200Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_200Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -373,10 +373,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "3" && ddlLabelQuantities.SelectedValue == "500")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size16x24_500Quantity;
+                    Subtotal = Side2_Size16x24_500Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_500Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_500Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -395,10 +395,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "4" && ddlLabelQuantities.SelectedValue == "25")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size18x24_25Quantity;
+                    Subtotal = Side2_Size18x24_25Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_25Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_25Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -414,10 +414,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "4" && ddlLabelQuantities.SelectedValue == "50")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size18x24_50Quantity;
+                    Subtotal = Side2_Size18x24_50Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_50Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_50Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -433,10 +433,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "4" && ddlLabelQuantities.SelectedValue == "100")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size18x24_100Quantity;
+                    Subtotal = Side2_Size18x24_100Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_100Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_100Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -452,10 +452,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "4" && ddlLabelQuantities.SelectedValue == "200")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size18x24_200Quantity;
+                    Subtotal = Side2_Size18x24_200Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_200Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_200Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -471,10 +471,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "4" && ddlLabelQuantities.SelectedValue == "500")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size18x24_500Quantity;
+                    Subtotal = Side2_Size18x24_500Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_500Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_500Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -493,10 +493,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "5" && ddlLabelQuantities.SelectedValue == "25")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size24x24_25Quantity;
+                    Subtotal = Side2_Size24x24_25Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_25Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_25Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -512,10 +512,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "5" && ddlLabelQuantities.SelectedValue == "50")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size24x24_50Quantity;
+                    Subtotal = Side2_Size24x24_50Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_50Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_50Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -531,10 +531,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "5" && ddlLabelQuantities.SelectedValue == "100")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size24x24_100Quantity;
+                    Subtotal = Side2_Size24x24_100Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_100Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_100Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -550,10 +550,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "5" && ddlLabelQuantities.SelectedValue == "200")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size24x24_200Quantity;
+                    Subtotal = Side2_Size24x24_200Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_200Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_200Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -569,10 +569,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "5" && ddlLabelQuantities.SelectedValue == "500")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size24x24_500Quantity;
+                    Subtotal = Side2_Size24x24_500Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_500Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_500Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -592,10 +592,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "6" && ddlLabelQuantities.SelectedValue == "25")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size24x32_25Quantity;
+                    Subtotal = Side2_Size24x32_25Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_25Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_25Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -611,10 +611,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "6" && ddlLabelQuantities.SelectedValue == "50")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size24x32_50Quantity;
+                    Subtotal = Side2_Size24x32_50Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_50Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_50Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -630,10 +630,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "6" && ddlLabelQuantities.SelectedValue == "100")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size24x32_100Quantity;
+                    Subtotal = Side2_Size24x32_100Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_100Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_100Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -649,10 +649,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "6" && ddlLabelQuantities.SelectedValue == "200")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size24x32_200Quantity;
+                    Subtotal = Side2_Size24x32_200Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_200Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_200Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
@@ -668,10 +668,10 @@ namespace Sign_Service_Label_Products.dealer
                 if (ddlLabelSize.SelectedValue == "6" && ddlLabelQuantities.SelectedValue == "500")
                 {
                     Double Subtotal = 0;
-                    Subtotal = Side1_Size24x32_500Quantity;
+                    Subtotal = Side2_Size24x32_500Quantity;
 
                     //Calculating the price for the colors.
-                    Double ColorPrice = Side1_500Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
+                    Double ColorPrice = Side2_500Quantity_LargePress_Color * Convert.ToDouble(NumberOfColors);
 
                     //Calculating the Total Cost.
                     Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
