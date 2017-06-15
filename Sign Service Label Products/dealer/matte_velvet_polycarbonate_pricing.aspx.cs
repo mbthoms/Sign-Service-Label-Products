@@ -145,6 +145,7 @@ namespace Sign_Service_Label_Products.dealer
             //Color, 250 Quantity.
             Double Stock1Color_10000Quantity = 360.00;
 
+            
 
             //======================================================================================================
             //Adhesive Pricing
@@ -158,19 +159,16 @@ namespace Sign_Service_Label_Products.dealer
             //Adhesive price is the value of the dropdpwn items.********
             Double AdhesiveSetupCharge = 0.00;
 
-            //Checking to see if the Adhesive has been selected, if so add Setup charge to the price.
-            if (ddlAdhesive.SelectedValue == "0")
-            {
-                AdhesiveSetupCharge = 0.00;
-            }
-            else if (SelectedHeight > 0 || SelectedWidth > 0)
-            {
-                AdhesiveSetupCharge = 0.00;
-            }
-            else if (Convert.ToDouble(ddlAdhesive.SelectedValue) > 0)
+
+            //Checking to see if the adhesive has been selected, if it has then add the setup charge to the price.
+            if (Convert.ToDouble(ddlAdhesive.SelectedValue) > 0 && SelectedWidth > 0 && SelectedHeight > 0)
             {
                 //Adhesive Setup Charge.
                 AdhesiveSetupCharge = 20.00;
+            }
+            else
+            {
+                AdhesiveSetupCharge = 0.00;
             }
 
             //Getting the number of colours

@@ -1611,19 +1611,16 @@ namespace Sign_Service_Label_Products.Dealer
             //Lamination price is the value of the dropdpwn items.********
             Double LaminationSetupCharge = 0.00;
 
-            //Checking to see if the Lamination has been seleted, if so add Setup charge to the price.
-            if (ddlLamination.SelectedValue == "0")
-            {
-                LaminationSetupCharge = 0.00;
-            }
-            else if (SelectedHeight > 0 || SelectedWidth > 0)
-            {
-                LaminationSetupCharge = 0.00;
-            }
-            else if (Convert.ToDouble(ddlLamination.SelectedValue) > 0)
+
+            //Checking to see if the lamination has been selected, if it has then add the setup charge to the price.
+            if (Convert.ToDouble(ddlLamination.SelectedValue) > 0 && SelectedWidth > 0 && SelectedHeight > 0)
             {
                 //Lamination Setup Charge.
                 LaminationSetupCharge = 20.00;
+            }
+            else
+            {
+                LaminationSetupCharge = 0.00;
             }
 
             //Getting the number of colours

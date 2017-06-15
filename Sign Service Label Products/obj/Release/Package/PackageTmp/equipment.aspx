@@ -8,7 +8,7 @@
             <h1>Equipment</h1>
         </div>
 
-       <div class="row">
+        <div class="row">
 
             <section class="col-sm-12 col-md-8 col-lg-8">
                 <p>At Sign Service Label Products we are fully equipped to serve your needs for Screen Printed Labels, Decals, Polycarbonate Nameplates, Subsurface Polycarbonate panels, Single & Two Sided Window Decals, Small Signs, Hard surface Mouse Pads and much much more!</p>
@@ -40,16 +40,6 @@
             <!-- /.col - equipment page Images -->
         </div>
         <!-- /.row -->
-
-
-
-
-
-
-
-
-
-
 
     </div>
 </asp:Content>
