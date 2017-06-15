@@ -11,7 +11,7 @@ namespace Sign_Service_Label_Products.Dealer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblDealerIndexTitle.Text = "Thank-you " + Session["contact_name"] + " " + "for Entering our Dealer Site!";
+            lblDealerIndexTitle.Text = "Thank-you " + Session["contact_name"] + " " + "for Entering our Dealer Section!";
         }
     }
 }

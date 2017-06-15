@@ -146,15 +146,24 @@ namespace Sign_Service_Label_Products.dealer
             Double Stock1Color_10000Quantity = 360.00;
 
 
-
             //======================================================================================================
             //Adhesive Pricing
             //======================================================================================================
+
+            //Calculating the Square Inches from the form values.
+            Double SelectedHeight = Convert.ToDouble(txtLabelHeight.Text);
+            Double SelectedWidth = Convert.ToDouble(txtLabelWidth.Text);
+            Double SqIn = Convert.ToDouble(txtLabelHeight.Text) * Convert.ToDouble(txtLabelWidth.Text);
+
             //Adhesive price is the value of the dropdpwn items.********
             Double AdhesiveSetupCharge = 0.00;
 
-            //Checking to see if the Adhesive has been seleted, if so add Setup charge to the price.
+            //Checking to see if the Adhesive has been selected, if so add Setup charge to the price.
             if (ddlAdhesive.SelectedValue == "0")
+            {
+                AdhesiveSetupCharge = 0.00;
+            }
+            else if (SelectedHeight > 0 || SelectedWidth > 0)
             {
                 AdhesiveSetupCharge = 0.00;
             }
@@ -165,12 +174,9 @@ namespace Sign_Service_Label_Products.dealer
             }
 
             //Getting the number of colours
-            Decimal NumberOfColors = Convert.ToDecimal(txtNumberOfColours.Text) - 2;
+            Decimal NumberOfColors = Convert.ToDecimal(txtNumberOfColours.Text) - 1;
             //Calculating the price for the colors.
 
-
-            //Calculating the Square Inches from the form values.
-            Double SqIn = Convert.ToDouble(txtLabelHeight.Text) * Convert.ToDouble(txtLabelWidth.Text);
 
             //50 Quantity If Statements
             //======================================================================================================

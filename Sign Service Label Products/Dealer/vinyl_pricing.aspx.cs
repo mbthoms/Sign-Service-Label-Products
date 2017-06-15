@@ -507,7 +507,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
             Double Stock4_35_40SqIn_10000Quantity = 3657.00;
             //Color, 250 Quantity.
             Double Stock4Color_10000Quantity = 360.00;
-            
+
             //======================================================================================================
             //Stock 6 Pricing
             //======================================================================================================
@@ -1603,11 +1603,21 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
             //======================================================================================================
             //Lamination Pricing
             //======================================================================================================
+
+            //Calculating the Square Inches from the form values.
+            Double SelectedHeight = Convert.ToDouble(txtLabelHeight.Text);
+            Double SelectedWidth = Convert.ToDouble(txtLabelWidth.Text);
+            Double SqIn = Convert.ToDouble(txtLabelHeight.Text) * Convert.ToDouble(txtLabelWidth.Text);
+
             //Lamination price is the value of the dropdpwn items.********
             Double LaminationSetupCharge = 0.00;
-            
+
             //Checking to see if the Lamination has been seleted, if so add Setup charge to the price.
-            if(ddlLamination.SelectedValue == "0")
+            if (ddlLamination.SelectedValue == "0") 
+            {
+                LaminationSetupCharge = 0.00;
+            }
+            else if (SelectedHeight > 0 || SelectedWidth > 0)
             {
                 LaminationSetupCharge = 0.00;
             }
@@ -1616,14 +1626,11 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 //Lamination Setup Charge.
                 LaminationSetupCharge = 20.00;
             }
-            
+
             //Getting the number of colours
             Decimal NumberOfColors = Convert.ToDecimal(txtNumberOfColours.Text) - 1;
             //Calculating the price for the colors.
- 
 
-            //Calculating the Square Inches from the form values.
-            Double SqIn = Convert.ToDouble(txtLabelHeight.Text) * Convert.ToDouble(txtLabelWidth.Text);
 
 
 
@@ -1633,14 +1640,14 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
 
             //50 Quantity If Statements
             //======================================================================================================
-            
+
             //Finding out if the stock is and show the price for that stock.
             if (ddlStock.SelectedValue == "1" && ddlLabelQuantities.SelectedValue == "50")
             {
                 Double Subtotal = 0;
 
-                 //Displaying the Subtotal.
-                if(SqIn >= 0 && SqIn <=2.5)
+                //Displaying the Subtotal.
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock1_0_2_5SqIn_50Quantity;
                 }
@@ -1668,7 +1675,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 {
                     Subtotal = Stock1_25_30SqIn_50Quantity;
                 }
-                else if (SqIn >= 30.1 && SqIn <= 35) 
+                else if (SqIn >= 30.1 && SqIn <= 35)
                 {
                     Subtotal = Stock1_30_35SqIn_50Quantity;
                 }
@@ -1676,46 +1683,46 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 {
                     Subtotal = Stock1_35_40SqIn_50Quantity;
                 }
-                else if (SqIn >40.1)
+                else if (SqIn > 40.1)
                 {
                     lblCustomQuoteMessage.Text = CustomQuoteMessage;
                 }
-                    //Calculating the price for the colors.
-                    Double ColorPrice = Stock1Color_50Quantity * Convert.ToDouble(NumberOfColors);
-                 
-                    //Geting the Lamination price from form.
-                    //Lamination price is the value of the dropdpwn items.
-                    Double LaminationPrice = Convert.ToDouble(ddlLamination.SelectedValue);
-          
- 
-                    //Calculating Lamination.
-                    //Calculating the TotalSqIn
-                    Double TotalSqIn = SqIn * Convert.ToDouble(ddlLabelQuantities.SelectedValue);
-                    //Calculating the TotalLaminationPrice
-                    Double TotalLaminationPrice = TotalSqIn * LaminationPrice;
-                    //Calculating the TotalLaminationWithMinPrice
-                    Decimal TotalLaminationWithMinPrice = Convert.ToDecimal(TotalLaminationPrice) + Convert.ToDecimal(LaminationSetupCharge);
-                    //formating the numbers that are displays to .00, this is done so people will know that it's money. 
-                    TotalLaminationWithMinPrice = Convert.ToDecimal(string.Format("{0:0.00}", TotalLaminationWithMinPrice));
-                    //Displaying the Price of Lamination.
-                    lblOverlamination.Text = "Overlamination:" + " " + "$" + TotalLaminationWithMinPrice.ToString();
+                //Calculating the price for the colors.
+                Double ColorPrice = Stock1Color_50Quantity * Convert.ToDouble(NumberOfColors);
 
-                    //Caluclating the Total without Lamination.
-                   Decimal TotalPricewithoutLamination = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
-                    //formating the numbers that are displays to .00, this is done so people will know that it's money. 
-                   TotalPricewithoutLamination = Convert.ToDecimal(string.Format("{0:0.00}", TotalPricewithoutLamination));
+                //Geting the Lamination price from form.
+                //Lamination price is the value of the dropdpwn items.
+                Double LaminationPrice = Convert.ToDouble(ddlLamination.SelectedValue);
 
-                    //Displaying the Subtotal.
-                   lblPriceWithoutLamination.Text = "Total Price Without Lamination:" + " " + "$" + TotalPricewithoutLamination.ToString();
-                   
-                    //Calculating the Total Cost.
-                    Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice) + Convert.ToDecimal(TotalLaminationWithMinPrice);
-                    //formating the numbers that are displays to .00, this is done so people will know that it's money. 
-                    Total = Convert.ToDecimal(string.Format("{0:0.00}", Total));
 
-                    //Displaying the Total Price.
-                    lblTotal.Text = "Total:" + " " + "$" + Total.ToString() + "*";
-                    
+                //Calculating Lamination.
+                //Calculating the TotalSqIn
+                Double TotalSqIn = SqIn * Convert.ToDouble(ddlLabelQuantities.SelectedValue);
+                //Calculating the TotalLaminationPrice
+                Double TotalLaminationPrice = TotalSqIn * LaminationPrice;
+                //Calculating the TotalLaminationWithMinPrice
+                Decimal TotalLaminationWithMinPrice = Convert.ToDecimal(TotalLaminationPrice) + Convert.ToDecimal(LaminationSetupCharge);
+                //formating the numbers that are displays to .00, this is done so people will know that it's money. 
+                TotalLaminationWithMinPrice = Convert.ToDecimal(string.Format("{0:0.00}", TotalLaminationWithMinPrice));
+                //Displaying the Price of Lamination.
+                lblOverlamination.Text = "Overlamination:" + " " + "$" + TotalLaminationWithMinPrice.ToString();
+
+                //Caluclating the Total without Lamination.
+                Decimal TotalPricewithoutLamination = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice);
+                //formating the numbers that are displays to .00, this is done so people will know that it's money. 
+                TotalPricewithoutLamination = Convert.ToDecimal(string.Format("{0:0.00}", TotalPricewithoutLamination));
+
+                //Displaying the Subtotal.
+                lblPriceWithoutLamination.Text = "Total Price Without Lamination:" + " " + "$" + TotalPricewithoutLamination.ToString();
+
+                //Calculating the Total Cost.
+                Decimal Total = Convert.ToDecimal(Subtotal) + Convert.ToDecimal(ColorPrice) + Convert.ToDecimal(TotalLaminationWithMinPrice);
+                //formating the numbers that are displays to .00, this is done so people will know that it's money. 
+                Total = Convert.ToDecimal(string.Format("{0:0.00}", Total));
+
+                //Displaying the Total Price.
+                lblTotal.Text = "Total:" + " " + "$" + Total.ToString() + "*";
+
             }
 
             //100 Quantity If Statements
@@ -1727,7 +1734,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock1_0_2_5SqIn_100Quantity;
                 }
@@ -1815,7 +1822,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock1_0_2_5SqIn_250Quantity;
                 }
@@ -1903,7 +1910,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock1_0_2_5SqIn_500Quantity;
                 }
@@ -1991,7 +1998,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock1_0_2_5SqIn_1000Quantity;
                 }
@@ -2079,7 +2086,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock1_0_2_5SqIn_2000Quantity;
                 }
@@ -2168,7 +2175,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock1_0_2_5SqIn_2500Quantity;
                 }
@@ -2257,7 +2264,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock1_0_2_5SqIn_5000Quantity;
                 }
@@ -2346,7 +2353,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock1_0_2_5SqIn_10000Quantity;
                 }
@@ -2437,7 +2444,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock2_0_2_5SqIn_50Quantity;
                 }
@@ -2524,7 +2531,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock2_0_2_5SqIn_100Quantity;
                 }
@@ -2612,7 +2619,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock2_0_2_5SqIn_250Quantity;
                 }
@@ -2700,7 +2707,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock2_0_2_5SqIn_500Quantity;
                 }
@@ -2788,7 +2795,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock2_0_2_5SqIn_1000Quantity;
                 }
@@ -2876,7 +2883,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock2_0_2_5SqIn_2000Quantity;
                 }
@@ -2965,7 +2972,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock2_0_2_5SqIn_2500Quantity;
                 }
@@ -3054,7 +3061,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock2_0_2_5SqIn_5000Quantity;
                 }
@@ -3143,7 +3150,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock2_0_2_5SqIn_10000Quantity;
                 }
@@ -3238,7 +3245,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock3_0_2_5SqIn_50Quantity;
                 }
@@ -3325,7 +3332,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock3_0_2_5SqIn_100Quantity;
                 }
@@ -3413,7 +3420,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock3_0_2_5SqIn_250Quantity;
                 }
@@ -3501,7 +3508,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock3_0_2_5SqIn_500Quantity;
                 }
@@ -3589,7 +3596,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock3_0_2_5SqIn_1000Quantity;
                 }
@@ -3677,7 +3684,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock3_0_2_5SqIn_2000Quantity;
                 }
@@ -3766,7 +3773,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock3_0_2_5SqIn_2500Quantity;
                 }
@@ -3855,7 +3862,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock3_0_2_5SqIn_5000Quantity;
                 }
@@ -3944,7 +3951,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock3_0_2_5SqIn_10000Quantity;
                 }
@@ -4040,7 +4047,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock4_0_2_5SqIn_50Quantity;
                 }
@@ -4127,7 +4134,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock4_0_2_5SqIn_100Quantity;
                 }
@@ -4215,7 +4222,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock4_0_2_5SqIn_250Quantity;
                 }
@@ -4303,7 +4310,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock4_0_2_5SqIn_500Quantity;
                 }
@@ -4391,7 +4398,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock4_0_2_5SqIn_1000Quantity;
                 }
@@ -4479,7 +4486,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock4_0_2_5SqIn_2000Quantity;
                 }
@@ -4568,7 +4575,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock4_0_2_5SqIn_2500Quantity;
                 }
@@ -4657,7 +4664,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock4_0_2_5SqIn_5000Quantity;
                 }
@@ -4746,7 +4753,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock4_0_2_5SqIn_10000Quantity;
                 }
@@ -4823,7 +4830,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 lblTotal.Text = "Total:" + " " + "$" + Total.ToString() + "*";
 
             }
-            
+
             //======================================================================================================
             //Stock 6
             //======================================================================================================
@@ -4837,7 +4844,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock6_0_2_5SqIn_50Quantity;
                 }
@@ -4924,7 +4931,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock6_0_2_5SqIn_100Quantity;
                 }
@@ -5012,7 +5019,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock6_0_2_5SqIn_250Quantity;
                 }
@@ -5100,7 +5107,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock6_0_2_5SqIn_500Quantity;
                 }
@@ -5188,7 +5195,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock6_0_2_5SqIn_1000Quantity;
                 }
@@ -5276,7 +5283,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock6_0_2_5SqIn_2000Quantity;
                 }
@@ -5365,7 +5372,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock6_0_2_5SqIn_2500Quantity;
                 }
@@ -5454,7 +5461,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock6_0_2_5SqIn_5000Quantity;
                 }
@@ -5543,7 +5550,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock6_0_2_5SqIn_10000Quantity;
                 }
@@ -5637,7 +5644,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock7_0_2_5SqIn_50Quantity;
                 }
@@ -5724,7 +5731,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock7_0_2_5SqIn_100Quantity;
                 }
@@ -5812,7 +5819,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock7_0_2_5SqIn_250Quantity;
                 }
@@ -5900,7 +5907,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock7_0_2_5SqIn_500Quantity;
                 }
@@ -5988,7 +5995,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock7_0_2_5SqIn_1000Quantity;
                 }
@@ -6076,7 +6083,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock7_0_2_5SqIn_2000Quantity;
                 }
@@ -6165,7 +6172,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock7_0_2_5SqIn_2500Quantity;
                 }
@@ -6254,7 +6261,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock7_0_2_5SqIn_5000Quantity;
                 }
@@ -6343,7 +6350,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock7_0_2_5SqIn_10000Quantity;
                 }
@@ -6438,7 +6445,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock8_0_2_5SqIn_50Quantity;
                 }
@@ -6525,7 +6532,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock8_0_2_5SqIn_100Quantity;
                 }
@@ -6613,7 +6620,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock8_0_2_5SqIn_250Quantity;
                 }
@@ -6701,7 +6708,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock8_0_2_5SqIn_500Quantity;
                 }
@@ -6789,7 +6796,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock8_0_2_5SqIn_1000Quantity;
                 }
@@ -6877,7 +6884,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock8_0_2_5SqIn_2000Quantity;
                 }
@@ -6966,7 +6973,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock8_0_2_5SqIn_2500Quantity;
                 }
@@ -7055,7 +7062,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock8_0_2_5SqIn_5000Quantity;
                 }
@@ -7144,7 +7151,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock8_0_2_5SqIn_10000Quantity;
                 }
@@ -7238,7 +7245,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock9_0_2_5SqIn_50Quantity;
                 }
@@ -7325,7 +7332,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock9_0_2_5SqIn_100Quantity;
                 }
@@ -7413,7 +7420,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock9_0_2_5SqIn_250Quantity;
                 }
@@ -7501,7 +7508,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock9_0_2_5SqIn_500Quantity;
                 }
@@ -7589,7 +7596,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock9_0_2_5SqIn_1000Quantity;
                 }
@@ -7677,7 +7684,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock9_0_2_5SqIn_2000Quantity;
                 }
@@ -7766,7 +7773,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock9_0_2_5SqIn_2500Quantity;
                 }
@@ -7855,7 +7862,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock9_0_2_5SqIn_5000Quantity;
                 }
@@ -7944,7 +7951,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock9_0_2_5SqIn_10000Quantity;
                 }
@@ -8038,7 +8045,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock10_0_2_5SqIn_50Quantity;
                 }
@@ -8125,7 +8132,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock10_0_2_5SqIn_100Quantity;
                 }
@@ -8213,7 +8220,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock10_0_2_5SqIn_250Quantity;
                 }
@@ -8301,7 +8308,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock10_0_2_5SqIn_500Quantity;
                 }
@@ -8389,7 +8396,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock10_0_2_5SqIn_1000Quantity;
                 }
@@ -8477,7 +8484,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock10_0_2_5SqIn_2000Quantity;
                 }
@@ -8566,7 +8573,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock10_0_2_5SqIn_2500Quantity;
                 }
@@ -8655,7 +8662,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock10_0_2_5SqIn_5000Quantity;
                 }
@@ -8744,7 +8751,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock10_0_2_5SqIn_10000Quantity;
                 }
@@ -8839,7 +8846,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock11_0_2_5SqIn_50Quantity;
                 }
@@ -8926,7 +8933,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock11_0_2_5SqIn_100Quantity;
                 }
@@ -9014,7 +9021,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock11_0_2_5SqIn_250Quantity;
                 }
@@ -9102,7 +9109,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock11_0_2_5SqIn_500Quantity;
                 }
@@ -9190,7 +9197,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock11_0_2_5SqIn_1000Quantity;
                 }
@@ -9278,7 +9285,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock11_0_2_5SqIn_2000Quantity;
                 }
@@ -9367,7 +9374,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock11_0_2_5SqIn_2500Quantity;
                 }
@@ -9456,7 +9463,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock11_0_2_5SqIn_5000Quantity;
                 }
@@ -9545,7 +9552,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock11_0_2_5SqIn_10000Quantity;
                 }
@@ -9636,7 +9643,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock13_0_2_5SqIn_50Quantity;
                 }
@@ -9723,7 +9730,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock13_0_2_5SqIn_100Quantity;
                 }
@@ -9811,7 +9818,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock13_0_2_5SqIn_250Quantity;
                 }
@@ -9899,7 +9906,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock13_0_2_5SqIn_500Quantity;
                 }
@@ -9987,7 +9994,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock13_0_2_5SqIn_1000Quantity;
                 }
@@ -10075,7 +10082,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock13_0_2_5SqIn_2000Quantity;
                 }
@@ -10164,7 +10171,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock13_0_2_5SqIn_2500Quantity;
                 }
@@ -10253,7 +10260,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock13_0_2_5SqIn_5000Quantity;
                 }
@@ -10342,7 +10349,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock13_0_2_5SqIn_10000Quantity;
                 }
@@ -10437,7 +10444,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock14_0_2_5SqIn_50Quantity;
                 }
@@ -10524,7 +10531,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock14_0_2_5SqIn_100Quantity;
                 }
@@ -10612,7 +10619,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock14_0_2_5SqIn_250Quantity;
                 }
@@ -10700,7 +10707,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock14_0_2_5SqIn_500Quantity;
                 }
@@ -10788,7 +10795,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock14_0_2_5SqIn_1000Quantity;
                 }
@@ -10876,7 +10883,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock14_0_2_5SqIn_2000Quantity;
                 }
@@ -10965,7 +10972,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock14_0_2_5SqIn_2500Quantity;
                 }
@@ -11054,7 +11061,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock14_0_2_5SqIn_5000Quantity;
                 }
@@ -11143,7 +11150,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock14_0_2_5SqIn_10000Quantity;
                 }
@@ -11237,7 +11244,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock15_0_2_5SqIn_50Quantity;
                 }
@@ -11324,7 +11331,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock15_0_2_5SqIn_100Quantity;
                 }
@@ -11412,7 +11419,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock15_0_2_5SqIn_250Quantity;
                 }
@@ -11500,7 +11507,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock15_0_2_5SqIn_500Quantity;
                 }
@@ -11588,7 +11595,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock15_0_2_5SqIn_1000Quantity;
                 }
@@ -11676,7 +11683,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock15_0_2_5SqIn_2000Quantity;
                 }
@@ -11765,7 +11772,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock15_0_2_5SqIn_2500Quantity;
                 }
@@ -11854,7 +11861,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock15_0_2_5SqIn_5000Quantity;
                 }
@@ -11943,7 +11950,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 Double Subtotal = 0;
 
                 //Displaying the Subtotal.
-                if (SqIn >= 0 && SqIn <= 2.5)
+                if (SqIn > 0 && SqIn <= 2.5)
                 {
                     Subtotal = Stock15_0_2_5SqIn_10000Quantity;
                 }
@@ -12020,7 +12027,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
                 lblTotal.Text = "Total:" + " " + "$" + Total.ToString() + "*";
 
             }
-            
+
         }
     }
 }

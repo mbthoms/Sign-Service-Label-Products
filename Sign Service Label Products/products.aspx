@@ -126,9 +126,9 @@
                     <div class="caption">
                         <h3>Lexan Face Plates</h3>
                         <p>Sign Service Label Products has been offering polycarbonate (LEXAN®) to it's customers for over 25 years. It is a product that is widely used in the electronics and telecommunications fields. But has many other uses.</p>
-                                <p>
-                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#lexan_face_plates">Read More...</button>
-                                </p>
+                        <p>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#lexan_face_plates">Read More...</button>
+                        </p>
                     </div>
                 </div>
             </section>

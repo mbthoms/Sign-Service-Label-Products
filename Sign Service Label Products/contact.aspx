@@ -91,11 +91,11 @@
                 <asp:Label ID="lblContactName" Text="Contact Name:*" runat="server" />
                 <asp:TextBox ID="txtContactName" runat="server" CssClass="form-control" />
                 <!-- Validators -->
-                 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtContactName" runat="server" ErrorMessage="Must include Contact Name." Display="Dynamic" cssClass="label label-danger"></asp:RequiredFieldValidator>
+                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" ControlToValidate="txtContactName" runat="server" ErrorMessage="Must include Contact Name." Display="Dynamic" CssClass="label label-danger"></asp:RequiredFieldValidator>
                 <br />
                 <!-- Company Name -->
                 <asp:Label ID="lblContactCompanyName" Text="Contact Company Name:*" runat="server" />
-                <asp:TextBox ID="txtContactCompanyName"  runat="server" CssClass="form-control" />
+                <asp:TextBox ID="txtContactCompanyName" runat="server" CssClass="form-control" />
                 <!-- Validators -->
                 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" ControlToValidate="txtContactCompanyName" runat="server" ErrorMessage="Must include Company Name." Display="Dynamic" CssClass="label label-danger"></asp:RequiredFieldValidator>
                 <br />
@@ -142,6 +142,6 @@
             </section>
             <!-- /Google Maps/Google Maps API. -->
         </div>
-       </div>
+    </div>
     <!-- /.container -->
 </asp:Content>

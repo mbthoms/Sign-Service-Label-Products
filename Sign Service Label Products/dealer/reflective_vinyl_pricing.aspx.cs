@@ -151,11 +151,21 @@ namespace Sign_Service_Label_Products.dealer
             //======================================================================================================
             //Lamination Pricing
             //======================================================================================================
+
+            //Calculating the Square Inches from the form values.
+            Double SelectedHeight = Convert.ToDouble(txtLabelHeight.Text);
+            Double SelectedWidth = Convert.ToDouble(txtLabelWidth.Text);
+            Double SqIn = Convert.ToDouble(txtLabelHeight.Text) * Convert.ToDouble(txtLabelWidth.Text);
+
             //Lamination price is the value of the dropdpwn items.********
             Double LaminationSetupCharge = 0.00;
 
             //Checking to see if the Lamination has been seleted, if so add Setup charge to the price.
             if (ddlLamination.SelectedValue == "0")
+            {
+                LaminationSetupCharge = 0.00;
+            }
+            else if (SelectedHeight > 0 || SelectedWidth > 0)
             {
                 LaminationSetupCharge = 0.00;
             }
@@ -168,11 +178,6 @@ namespace Sign_Service_Label_Products.dealer
             //Getting the number of colours
             Decimal NumberOfColors = Convert.ToDecimal(txtNumberOfColours.Text) - 1;
             //Calculating the price for the colors.
-
-
-            //Calculating the Square Inches from the form values.
-            Double SqIn = Convert.ToDouble(txtLabelHeight.Text) * Convert.ToDouble(txtLabelWidth.Text);
-
 
 
 

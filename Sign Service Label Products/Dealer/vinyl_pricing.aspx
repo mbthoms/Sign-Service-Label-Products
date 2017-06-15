@@ -1,10 +1,8 @@
 ﻿<%@ Page Title="Screen Printed Vinyl Pricing - Dealer Login - Sign Service Label Products" Language="C#" MasterPageFile="~/Dealer/DealerLogin.Master" AutoEventWireup="true" CodeBehind="vinyl_pricing.aspx.cs" Inherits="Sign_Service_Label_Products.Dealer.Pricing.vinyl_pricing" %>
 
-<%@ Register Src="~/auth.ascx" TagPrefix="uc1" TagName="auth" %>
 
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
-    <uc1:auth runat="server" ID="auth" />
     
     <link href="../css/print/printer_page_styles.css" rel="stylesheet" media="print" />
 </asp:Content>

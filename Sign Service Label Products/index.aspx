@@ -1,20 +1,19 @@
-﻿ <%@ Page Title="Home - Sign Service Label Products" Language="C#" MasterPageFile="~/Public.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Sign_Service_Label_Products.index" %>
+﻿<%@ Page Title="Home - Sign Service Label Products" Language="C#" MasterPageFile="~/Public.Master" AutoEventWireup="true" CodeBehind="index.aspx.cs" Inherits="Sign_Service_Label_Products.index" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-        <div class="row">
-                <section id="hero" class="col-sm-12 col-md-12 col-lg-12">
-                    <div id="hero-text" class="container">
-                        <h1 class="hero-heading-uppercase">Sign service Label Products</h1>
-                        <h2 class="hero-subheading">Screen Printed Labels and Decals for the Trade.</h2>
-                        <h2><a id="toll-free-phone-index" href="tel:18007872382">1 (800) 787-2382</a></h2>
-                    </div>
-                    <!-- End of Hero Text -->
-
-                </section>
+    <div class="row">
+        <section id="hero" class="col-sm-12 col-md-12 col-lg-12">
+            <div id="hero-text" class="container">
+                <h1 class="hero-heading-uppercase">Sign service Label Products</h1>
+                <h2 class="hero-subheading">Screen Printed Labels and Decals for the Trade.</h2>
+                <h2><a id="toll-free-phone-index" href="tel:18007872382">1 (800) 787-2382</a></h2>
             </div>
-    
+            <!-- End of Hero Text -->
+        </section>
+    </div>
+
     <div id="page-content" class="container">
         <div class="page-header">
             <h1>Sign Service Label Products <small>Producing Quality Labels & decals to the Trade Since 1981.</small></h1>
@@ -28,9 +27,11 @@
             <section class="col-sm-12 col-md-4 col-lg-4">
                 <img id="index-2-img" src="img/index/danger_high_voltage.jpg" alt="Image of a sign that says Danger, High Voltage." />
             </section>
-            </div><!-- /.row -->
-        </div> <!-- /.container -->
-        
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /.container -->
+
     <div class="container">
         <div class="row">
             <div class="col-sm-12 col-md-4 col-lg-4">
@@ -56,7 +57,7 @@
                     <!-- End of Panel Heading -->
                     <div class="panel-body">
                         <p>We are a TRADE ONLY Screen Printed and Digital Label & Decal Supplier. If you are reselling our product to an end user then please continue. If you are an end user of our products then please contact a label supplier in your area.</p>
-                        <a href="login.aspx" class="btn btn-warning">Sign Up for Dealer Login.</a> 
+                        <a href="login.aspx" class="btn btn-warning">Sign Up for Dealer Login.</a>
                     </div>
                     <!-- End of Panel Body -->
                 </div>
@@ -71,8 +72,8 @@
                     </div>
                     <div class="panel-body">
                         <p>Our order desk is open 8am - 5pm Monday to Friday (except holidays) and our Art Department is able to accept your PC & MAC files for colour separating, trapping and stepping. Quotations are given back within 24 hours<a href="#more-info" class="superscript">[2]</a> and delivery is from two to three weeks without rush charges.</p>
-                        <a href="contact.aspx" class="btn btn-warning">Contact Us</a> 
-                   </div>
+                        <a href="contact.aspx" class="btn btn-warning">Contact Us</a>
+                    </div>
                     <!-- End of Panel Body -->
                 </div>
                 <!-- End of Paneling -->
