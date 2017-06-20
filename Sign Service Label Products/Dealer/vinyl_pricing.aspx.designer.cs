@@ -13,6 +13,15 @@ namespace Sign_Service_Label_Products.Dealer.Pricing {
     public partial class vinyl_pricing {
         
         /// <summary>
+        /// auth control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::Sign_Service_Label_Products.auth auth;
+        
+        /// <summary>
         /// lblStock control.
         /// </summary>
         /// <remarks>

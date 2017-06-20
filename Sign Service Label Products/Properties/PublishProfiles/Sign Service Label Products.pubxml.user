@@ -44,7 +44,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/21/2016 08:43:32</publishTime>
     </File>
     <File Include="bin/Sign Service Label Products.dll">
-      <publishTime>06/15/2017 13:12:56</publishTime>
+      <publishTime>06/20/2017 11:54:22</publishTime>
     </File>
     <File Include="bin/Sign Service Label Products.pdb">
       <publishTime>01/01/0001 00:00:00</publishTime>
@@ -65,7 +65,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/21/2016 08:43:32</publishTime>
     </File>
     <File Include="css/global_styles.css">
-      <publishTime>10/21/2016 08:43:32</publishTime>
+      <publishTime>06/20/2017 10:58:04</publishTime>
     </File>
     <File Include="css/print/printer_page_styles.css">
       <publishTime>10/21/2016 08:43:32</publishTime>
@@ -137,7 +137,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>10/21/2016 08:43:32</publishTime>
     </File>
     <File Include="Dealer/vinyl_pricing.aspx">
-      <publishTime>06/15/2017 13:12:47</publishTime>
+      <publishTime>06/20/2017 11:52:32</publishTime>
     </File>
     <File Include="equipment.aspx">
       <publishTime>06/14/2017 20:28:15</publishTime>

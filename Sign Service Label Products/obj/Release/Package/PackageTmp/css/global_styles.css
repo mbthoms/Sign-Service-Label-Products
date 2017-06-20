@@ -25,6 +25,7 @@ h1 small {
     font-weight: 400;
 }
 
+
 /*Over-riding the Bootstrap colour of white. Making sure the colour of the text in the dropdown is black on yellow.*/
 @media (max-width: 767px) {
     .navbar-default .navbar-nav .open .dropdown-menu > li > a {
@@ -86,13 +87,15 @@ h1 small {
     border-top: 2px solid black;
 }
 
-
+/*This is the custom quote message to tell user that the quote needs to be a custom one that you need to call to get a quote.*/
 .custom-quote-message a {
     color: white;
+    font-weight: bold;
+    font-size: 12pt;
 }
 
     .custom-quote-message a:hover {
-        color: #eee;
+        color: red;
     }
 
 fieldset {
