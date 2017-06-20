@@ -3,6 +3,10 @@ Sign Service Label Products WebSite.
 This content can not be shared with the world.
 # Update Log
 ## Updated June 20 2017
+### Fixed Build Error
+- The build error in one of the pricing pages has been fixed.
+- Uploading minor style changes and bug fixes.
+
 ### Fixed the Lamination
 - The pricing for the lam works the way it should now.
 - The Lam Pricing is 0.00 if you pick 0 on the HxW fields.
