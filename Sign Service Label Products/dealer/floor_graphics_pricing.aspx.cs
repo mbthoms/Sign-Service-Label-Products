@@ -11,7 +11,7 @@ namespace Sign_Service_Label_Products.dealer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Hides the Message if showing when you press the "Get Quote" button.
+            //Hides the Message if showing when you press the "Get Quote" button in the quote template.
             if (IsPostBack)
             {
                 lblCustomQuoteMessage.Text = "";

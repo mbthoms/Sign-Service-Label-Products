@@ -146,7 +146,8 @@
                         <br />
                         <div class="total-pricing-amount">
                             <asp:Label ID="lblTotal" Text="Total:*" runat="server" />
-                            <asp:Label ID="lblCustomQuoteMessage" Text="" runat="server" CssClass=" label label-danger custom-quote-message" />
+                            <br />
+                            <asp:Label ID="lblCustomQuoteMessage" Text="" runat="server" CssClass="custom-quote-message" />
                         </div>
                         <asp:Label ID="lblPlusTax" Text="*Plus Applicable Taxes." runat="server" />
                     </div>

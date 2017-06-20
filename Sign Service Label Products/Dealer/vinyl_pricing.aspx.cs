@@ -11,7 +11,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Hides the Message if showing when you press the "Get Quote" button.
+            //Hides the Message if showing when you press the "Get Quote" button in the quote page template.
             if (IsPostBack)
             {
                 lblCustomQuoteMessage.Text = "";
@@ -22,7 +22,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
         {
             //Global Vars
             //======================================================================================================
-            String CustomQuoteMessage = "Please call or email our sales desk for a <br />custom quote at: <a href='tel:18007872382'>1 (800)-787-2382</a><br />or <a href='mailto:sales@signservice.com'>sales@signservice.com</a>";
+            String CustomQuoteMessage = "<div class='alert alert-danger' role='alert'>Please call or email our sales desk for a custom quote at: <a href='tel:18007872382'>1 (800)-787-2382</a><br />or <a href='mailto:sales@signservice.com'>sales@signservice.com</a></div>";
 
             //======================================================================================================
             //Stock 1 Pricing
@@ -1614,7 +1614,7 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
 
 
             //Checking to see if the lamination has been selected, if it has then add the setup charge to the price.
-            if (Convert.ToDouble(ddlLamination.SelectedValue) > 0 && SelectedWidth > 0 && SelectedHeight > 0)
+            if (Convert.ToDouble(ddlLamination.SelectedValue) > 0 && SelectedWidth > 0 && SelectedHeight > 0 && SqIn < 40.1)
             {
                 //Lamination Setup Charge.
                 LaminationSetupCharge = 20.00;
@@ -1623,6 +1623,10 @@ namespace Sign_Service_Label_Products.Dealer.Pricing
             {
                 LaminationSetupCharge = 0.00;
             }
+
+            //======================================================================================================
+            //Number of Colours
+            //======================================================================================================
 
             //Getting the number of colours
             Decimal NumberOfColors = Convert.ToDecimal(txtNumberOfColours.Text) - 1;

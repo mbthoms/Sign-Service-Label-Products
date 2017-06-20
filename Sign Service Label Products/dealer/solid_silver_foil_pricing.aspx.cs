@@ -11,7 +11,7 @@ namespace Sign_Service_Label_Products.dealer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Hides the Message if showing when you press the "Get Quote" button.
+            //Hides the Message if showing when you press the "Get Quote" button the quote page template.
             if (IsPostBack)
             {
                 lblCustomQuoteMessage.Text = "";
@@ -22,7 +22,7 @@ namespace Sign_Service_Label_Products.dealer
         {
             //Global Vars
             //======================================================================================================
-            String CustomQuoteMessage = "Please call or email our sales desk for a <br />custom quote at: <a href='tel:18007872382'>1 (800)-787-2382</a><br />or <a href='mailto:sales@signservice.com'>sales@signservice.com</a>";
+            String CustomQuoteMessage = "<div class='alert alert-danger' role='alert'>Please call or email our sales desk for a custom quote at: <a href='tel:18007872382'>1 (800)-787-2382</a><br />or <a href='mailto:sales@signservice.com'>sales@signservice.com</a></div>";
 
             //======================================================================================================
             //Pricing
@@ -148,19 +148,30 @@ namespace Sign_Service_Label_Products.dealer
             //======================================================================================================
             //Lamination Pricing
             //======================================================================================================
-            //Lamination price is the value of the dropdpwn items.********
+
+            //Calculating the Square Inches from the form values.
+            Double SelectedHeight = Convert.ToDouble(txtLabelHeight.Text);
+            Double SelectedWidth = Convert.ToDouble(txtLabelWidth.Text);
+            Double SqIn = Convert.ToDouble(txtLabelHeight.Text) * Convert.ToDouble(txtLabelWidth.Text);
+
+            //Lamination price is the value of the dropdown items.********
             Double LaminationSetupCharge = 0.00;
 
-            //Checking to see if the Lamination has been seleted, if so add Setup charge to the price.
-            if (ddlLamination.SelectedValue == "0")
-            {
-                LaminationSetupCharge = 0.00;
-            }
-            else if (Convert.ToDouble(ddlLamination.SelectedValue) > 0)
+
+            //Checking to see if the lamination has been selected, if it has then add the setup charge to the price.
+            if (Convert.ToDouble(ddlLamination.SelectedValue) > 0 && SelectedWidth > 0 && SelectedHeight > 0 && SqIn < 40.1)
             {
                 //Lamination Setup Charge.
                 LaminationSetupCharge = 20.00;
             }
+            else
+            {
+                LaminationSetupCharge = 0.00;
+            }
+
+            //======================================================================================================
+            //Number of Colours
+            //======================================================================================================
 
             //Getting the number of colours
             Decimal NumberOfColors = Convert.ToDecimal(txtNumberOfColours.Text) - 1;

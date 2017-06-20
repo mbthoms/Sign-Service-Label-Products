@@ -11,7 +11,7 @@ namespace Sign_Service_Label_Products.dealer
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //Hides the Message if showing when you press the "Get Quote" button.
+            //Hides the Message if showing when you press the "Get Quote" button in the quote template.
             if (IsPostBack)
             {
                 lblCustomQuoteMessage.Text = "";
@@ -22,7 +22,7 @@ namespace Sign_Service_Label_Products.dealer
         {
             //Global Vars
             //======================================================================================================
-            String CustomQuoteMessage = "Please call or email our sales desk for a <br />custom quote at: <a href='tel:18007872382'>1 (800)-787-2382</a><br />or <a href='mailto:sales@signservice.com'>sales@signservice.com</a>";
+            String CustomQuoteMessage = "<div class='alert alert-danger' role='alert'>Please call or email our sales desk for a custom quote at: <a href='tel:18007872382'>1 (800)-787-2382</a><br />or <a href='mailto:sales@signservice.com'>sales@signservice.com</a></div>";
 
             //======================================================================================================
             //Pricing
@@ -145,7 +145,9 @@ namespace Sign_Service_Label_Products.dealer
             //Color, 250 Quantity.
             Double Stock1Color_10000Quantity = 360.00;
 
-            
+
+
+
 
             //======================================================================================================
             //Adhesive Pricing
@@ -156,12 +158,12 @@ namespace Sign_Service_Label_Products.dealer
             Double SelectedWidth = Convert.ToDouble(txtLabelWidth.Text);
             Double SqIn = Convert.ToDouble(txtLabelHeight.Text) * Convert.ToDouble(txtLabelWidth.Text);
 
-            //Adhesive price is the value of the dropdpwn items.********
+            //Adhesive price is the value of the dropdown items.********
             Double AdhesiveSetupCharge = 0.00;
 
 
-            //Checking to see if the adhesive has been selected, if it has then add the setup charge to the price.
-            if (Convert.ToDouble(ddlAdhesive.SelectedValue) > 0 && SelectedWidth > 0 && SelectedHeight > 0)
+            //Checking to see if the Adhesive has been selected, if it has then add the setup charge to the price.
+            if (Convert.ToDouble(ddlAdhesive.SelectedValue) > 0 && SelectedWidth > 0 && SelectedHeight > 0 && SqIn < 40.1)
             {
                 //Adhesive Setup Charge.
                 AdhesiveSetupCharge = 20.00;
@@ -171,6 +173,9 @@ namespace Sign_Service_Label_Products.dealer
                 AdhesiveSetupCharge = 0.00;
             }
 
+            //======================================================================================================
+            //Number of Colours
+            //======================================================================================================
             //Getting the number of colours
             Decimal NumberOfColors = Convert.ToDecimal(txtNumberOfColours.Text) - 1;
             //Calculating the price for the colors.
